@@ -25,5 +25,14 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(pindahsignup);
                 }
             });
+
+        pindah = findViewById(R.id.loginButton);
+        pindah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pindahlogin = new Intent(MainActivity.this,Login.class);
+                startActivity(pindahlogin);
+            }
+        });
     }
 }
