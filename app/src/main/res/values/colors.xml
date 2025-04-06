@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#C97940</color>
     <color name="blue_button">#0118D8</color>
+    <color name="tranparent">#00000000</color>
 </resources>

@@ -8,17 +8,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button pindah;
+    Button startButton,loginButton;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
 
-            pindah = findViewById(R.id.startButton);
+        startButton = findViewById(R.id.startButton);
+        loginButton = findViewById(R.id.loginButton);
 
-            pindah.setOnClickListener(new View.OnClickListener() {
+        startButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent pindahsignup = new Intent(MainActivity.this,SignUp.class);
@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-        pindah = findViewById(R.id.loginButton);
-        pindah.setOnClickListener(new View.OnClickListener() {
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent pindahlogin = new Intent(MainActivity.this,Login.class);
