@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".beranda"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/orange">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/blue_button"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/searchBox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="67dp"
+            android:background="@android:color/white"
+            android:hint="Search"
+            android:inputType="text"
+            android:padding="12dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Sewa"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="CATEGORY"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnexca"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:background="@color/white"
+            android:src="@drawable/exca_b1"
+            android:scaleType="fitCenter"
+            android:contentDescription="Bucket Ecavator"
+            />
+
+
+
+        <ImageButton
+            android:id="@+id/btnroller"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:background="@color/white"
+            android:src="@drawable/roler_b1"
+            android:scaleType="fitCenter"
+            android:contentDescription="Vibro Roller"/>
+
+        <ImageButton
+            android:id="@+id/btndozer"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:background="@color/white"
+            android:src="@drawable/dozzer_b1"
+            android:scaleType="fitCenter"
+            android:contentDescription="Dozer"/>
+
+        <ImageButton
+            android:id="@+id/btnbreakerexca"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:background="@color/white"
+            android:src="@drawable/breaker_b1"
+            android:scaleType="fitCenter"
+            android:contentDescription="Breake Excavator"/>
+
+        <ImageButton
+            android:id="@+id/btnforklift"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:background="@color/white"
+            android:src="@drawable/forklif_b1"
+            android:scaleType="fitCenter"
+            android:contentDescription="Forklift"/>
+
+        <ImageButton
+            android:id="@+id/btnlift"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:background="@color/white"
+            android:src="@drawable/lift_b1"
+            android:scaleType="fitCenter"
+            android:contentDescription="Scissor Lift"/>
+    </GridLayout>
+
+</LinearLayout>
