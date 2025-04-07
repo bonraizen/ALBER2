@@ -9,6 +9,16 @@
     tools:context=".Login"
     android:background="@color/orange">
 
+    <ImageButton
+        android:id="@+id/btnback"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="Back"
+        android:layout_marginBottom="10dp"
+        />
+
     <TextView
         android:id="@+id/welcome_back"
         android:layout_width="wrap_content"

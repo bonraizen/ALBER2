@@ -13,21 +13,17 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Login extends AppCompatActivity {
 
-    Button pindah,sign_in_button;
+    Button pindah,signin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
 
         pindah = findViewById(R.id.btnsignup);
-        sign_in_button = findViewById(R.id.sign_in_button);
+        signin = findViewById(R.id.sign_in_button);
 
         pindah.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,11 +33,11 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        sign_in_button.setOnClickListener(new View.OnClickListener() {
+        signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent signin = new Intent(Login.this,beranda.class);
-                startActivity(signin);
+                Intent signini = new Intent(Login.this,beranda.class);
+                startActivity(signini);
             }
         });
     }
