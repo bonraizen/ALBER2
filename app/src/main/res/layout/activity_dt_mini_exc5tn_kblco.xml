@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context=".dtMiniExc5tn_kblco">
+    tools:context=".dtMiniExc5tn_kblco"
+    android:background="@color/orange">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -21,6 +23,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
+
+            <ImageButton
+                android:id="@+id/btnback"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/btn_backuser"
+                android:contentDescription="Back"
+                android:layout_marginBottom="10dp"
+                />
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -176,34 +189,58 @@
                 android:text="CEK KETERSEDIAAN"
                 android:textStyle="bold"/>
 
-            <CalendarView
-                android:id="@+id/calendarView"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="390dp"
+                app:cardBackgroundColor="@color/orange">
 
-            <Button
-                android:id="@+id/btncekkuota"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="10dp"
-                android:text="Cek Ketersediaan"
-                android:textSize="12dp"
-                tools:ignore="TextSizeCheck" />
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
 
-            <Button
-                android:id="@+id/leaseNowButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="SEWA SEKARANG"
-                android:layout_marginTop="8dp"/>
+                <Button
+                    android:id="@+id/btncekkuota"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_gravity="bottom"
+                    android:backgroundTint="@color/black"
+                    android:text="Cek Ketersediaan"
+                    android:textSize="11dp"
+                    tools:ignore="TextSizeCheck" />
+            </androidx.cardview.widget.CardView>
 
-            <Button
-                android:id="@+id/requestQuoteButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Minta Kuotas"
-                android:layout_marginTop="8dp"/>
-            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="60dp"
+                app:cardBackgroundColor="@color/white">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="30dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/orelega_one"
+                    android:text="PESAN SEKARANG" />
+
+                <Button
+                    android:id="@+id/requestQuoteButton"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="20dp"
+                    android:text="Minta Kuotas"
+                    android:textSize="13dp"
+                    tools:ignore="TextSizeCheck" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
         </ScrollView>
 </LinearLayout>
