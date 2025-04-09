@@ -14,6 +14,14 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string-array name="jk_alber">
+        <item>Bucket Excavator</item>
+        <item>Roller</item>
+        <item>Bulldozer</item>
+        <item>Breaker Excavator</item>
+        <item>Fork Lift</item>
+        <item>Scissor Lift</item>
+    </string-array>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
