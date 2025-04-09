@@ -44,7 +44,7 @@
                 android:text="Nama" />
 
             <EditText
-                android:id="@+id/nama"
+                android:id="@+id/etnama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -58,10 +58,11 @@
                 android:text="Nama Perusahaan" />
 
             <EditText
-                android:id="@+id/namaPerusahaan"
+                android:id="@+id/etnamaPerusahaan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:inputType="text"
                 android:hint="xxxxx"
                 android:minHeight="70dp" />
 
@@ -71,10 +72,11 @@
                 android:text="No telepon" />
 
             <EditText
-                android:id="@+id/nomorTelepon"
+                android:id="@+id/etnomorTelepon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:inputType="number"
                 android:hint="08xxxxx"
                 android:minHeight="48dp" />
 
@@ -84,10 +86,11 @@
                 android:text="Email Perusahaan" />
 
             <EditText
-                android:id="@+id/email"
+                android:id="@+id/etemail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:inputType="textEmailAddress"
                 android:hint="xxxx@.com"
                 android:minHeight="48dp" />
 
@@ -97,10 +100,11 @@
                 android:text="Nik KTP" />
 
             <EditText
-                android:id="@+id/nikKTP"
+                android:id="@+id/etnikKTP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:inputType="number"
                 android:hint="xxxxx"
                 android:minHeight="48dp" />
 
@@ -130,7 +134,7 @@
                 android:text="Password" />
 
             <EditText
-                android:id="@+id/createPassword"
+                android:id="@+id/etcreatePassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -144,7 +148,7 @@
                 android:text="Konfirmasi Passwordd" />
 
             <EditText
-                android:id="@+id/confirmPassword"
+                android:id="@+id/etconfirmPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -153,7 +157,7 @@
                 android:minHeight="48dp" />
 
             <Button
-                android:id="@+id/signUpButton"
+                android:id="@+id/btnsignup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
