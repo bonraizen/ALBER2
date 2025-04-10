@@ -13,12 +13,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class bucketexca extends AppCompatActivity {
 
-    Button detexca5tnklbco,DetExca5tnCat,DetExca5tnKmtsu;
+    Button detexcatnklbco;
 
     public void sumber(){
-        detexca5tnklbco = findViewById(R.id.detexca5tnklbco);
-        DetExca5tnCat = findViewById(R.id.DetExca5tnCat);
-        DetExca5tnKmtsu = findViewById(R.id.DetExca5tnKmtsu);
+        detexcatnklbco = findViewById(R.id.detexca5tnklbco);
 
     }
 
