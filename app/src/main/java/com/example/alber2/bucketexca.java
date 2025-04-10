@@ -28,7 +28,7 @@ public class bucketexca extends AppCompatActivity {
 
         sumber();
 
-        detexca5tnklbco.setOnClickListener(new View.OnClickListener() {
+        detexcatnklbco.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent detilexca5tnklbco = new Intent(bucketexca.this,dtMiniExc5tn_kblco.class);
