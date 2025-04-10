@@ -81,7 +81,7 @@ public class SignUp extends AppCompatActivity {
                         database.child(email).child("nomorTelepon").setValue(nomorTelepon);
                         database.child(email).child("email").setValue(email);
                         database.child(email).child("nikKTP").setValue(nikKTP);
-                        database.child(email).child("confirmPassword").setValue(confirmPassword);
+                        database.child(email).child("password").setValue(confirmPassword);
                         Toast.makeText(SignUp.this, "Data Berhasil Disimpan", Toast.LENGTH_SHORT).show();
 
                         Intent login = new Intent(SignUp.this,Login.class);
