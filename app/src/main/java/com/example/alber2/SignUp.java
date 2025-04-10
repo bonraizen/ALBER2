@@ -71,24 +71,29 @@ public class SignUp extends AppCompatActivity {
                 String createPassword = etcreatePassword.getText().toString();
                 String confirmPassword = etconfirmPassword.getText().toString();
 
-                if(nama.isEmpty()||namaPerusahaan.isEmpty()||nomorTelepon.isEmpty()||email.isEmpty()||nikKTP.isEmpty()||createPassword.isEmpty()||confirmPassword.isEmpty()) {
+                if (nama.isEmpty() || createPassword.isEmpty() || confirmPassword.isEmpty()) {
                     Toast.makeText(SignUp.this, "Tidak boleh ada form yang kosong", Toast.LENGTH_SHORT).show();
+                } else {
+                    database = FirebaseDatabase.getInstance().getReference("user");
 
-                }else{
-                        database = FirebaseDatabase.getInstance().getReference("user");
-                        database.child(email).child("nama").setValue(nama);
-                        database.child(email).child("namaPerusahaan").setValue(namaPerusahaan);
-                        database.child(email).child("nomorTelepon").setValue(nomorTelepon);
-                        database.child(email).child("email").setValue(email);
-                        database.child(email).child("nikKTP").setValue(nikKTP);
-                        database.child(email).child("password").setValue(confirmPassword);
-                        Toast.makeText(SignUp.this, "Data Berhasil Disimpan", Toast.LENGTH_SHORT).show();
+                    DatabaseReference userRef = database.child(email.replace(".", "_")); // Firebase tidak mendukung titik di key
+                    userRef.child("nama").setValue(nama)
+                            .addOnSuccessListener(aVoid -> {
+                                userRef.child("namaPerusahaan").setValue(namaPerusahaan);
+                                userRef.child("email").setValue(email);
+                                userRef.child("password").setValue(createPassword);
 
-                        Intent login = new Intent(SignUp.this,Login.class);
-                        startActivity(login);
-                    }
-
+                                Toast.makeText(SignUp.this, "Data Berhasil Disimpan: " + nama, Toast.LENGTH_SHORT).show();
+                                Intent sini = new Intent(SignUp.this, Login.class);
+                                startActivity(sini);
+                            })
+                            .addOnFailureListener(e -> {
+                                Toast.makeText(SignUp.this, "Gagal menyimpan data: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                                e.printStackTrace(); // Untuk logcat debugging
+                            });
+                }
             }
         });
+
     }
 }

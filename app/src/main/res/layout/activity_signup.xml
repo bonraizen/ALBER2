@@ -180,7 +180,8 @@
                 android:layout_height="48dp"
                 android:layout_marginLeft="190dp"
                 android:backgroundTint="#4422bf"
-                android:text="sign in" />
+                android:text="sign in"
+                android:layout_marginBottom="200dp"/>
         </LinearLayout>
     </ScrollView>
 

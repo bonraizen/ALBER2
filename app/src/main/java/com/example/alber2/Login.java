@@ -32,7 +32,7 @@ public class Login extends AppCompatActivity {
         pindah = findViewById(R.id.btnsignup);
         signin = findViewById(R.id.sign_in_button);
         email_input = findViewById(R.id.email_input);
-        password_input = findViewById(R.id.email_input);
+        password_input = findViewById(R.id.password_input);
     }
 
     @Override
@@ -54,30 +54,37 @@ public class Login extends AppCompatActivity {
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = email_input.getText().toString();
-                String password = password_input.getText().toString();
+                String email = email_input.getText().toString().replace(".", "_");
+                String password = password_input.getText().toString().replace("|","_");
 
                 database = FirebaseDatabase.getInstance().getReference("user");
 
-                if (email.isEmpty()||password.isEmpty()){
-                    Toast.makeText(Login.this, "Email dan Password harus Di ISI", Toast.LENGTH_SHORT).show();
-                }else {
+                if (email.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(Login.this, "Email dan Password harus diisi", Toast.LENGTH_SHORT).show();
+                } else {
                     database.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            if(snapshot.child(email).exists()){
-                                if(snapshot.child(email).child("password").getValue(String.class).equals(password)){
-                                    Intent signini = new Intent(Login.this,beranda.class);
+                            if (snapshot.hasChild(email)) {
+                                String dbPassword = snapshot.child(email).child("password").getValue(String.class);
+                                if (dbPassword != null && dbPassword.equals(password)) {
+                                    Toast.makeText(Login.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
+                                    Intent signini = new Intent(Login.this, beranda.class);
                                     startActivity(signini);
+                                } else {
+                                    Toast.makeText(Login.this, "Password salah", Toast.LENGTH_SHORT).show();
+                                    System.out.println("DEBUG: Password yang dimasukkan tidak sesuai dengan database.");
                                 }
-                            }else{
-                                Toast.makeText(Login.this, "Email belum terdaftar atau Password salah", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(Login.this, "Email belum terdaftar", Toast.LENGTH_SHORT).show();
+                                System.out.println("DEBUG: Email tidak ditemukan di database.");
                             }
                         }
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
-
+                            Toast.makeText(Login.this, "Gagal mengakses database: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                            System.out.println("DEBUG: Firebase error - " + error.getMessage());
                         }
                     });
                 }
