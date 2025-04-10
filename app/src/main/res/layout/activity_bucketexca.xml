@@ -51,7 +51,7 @@
                     android:layout_height="200dp"
                     android:contentDescription="Mini Excavator, 5 Ton, Kobelco"
                     android:scaleType="fitCenter"
-                    android:src="@mipmap/ic_launcher" /> <!-- Replace with actual image resource -->
+                    android:src="@drawable/exca5tn_klbco" /> <!-- Replace with actual image resource -->
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -108,7 +108,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:contentDescription="Mini Excavator, 5 Ton, Cat"
-                    android:src="@mipmap/ic_launcher" /> <!-- Replace with actual image resource -->
+                    android:src="@drawable/exca5tn_cat" /> <!-- Replace with actual image resource -->
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -162,7 +162,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/exca5tn_kmtsu"
                     android:contentDescription="Mini Excavator, 5 Ton, Komatsu"/>
 
                 <TextView

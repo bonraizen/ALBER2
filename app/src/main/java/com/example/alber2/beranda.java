@@ -17,9 +17,18 @@ public class beranda extends AppCompatActivity {
     ImageButton btnexca,btnroller,btndozer,btnbreakerexca,btnforklift,btnlift;
 
 
+    public void sumber (){
+        btnexca = findViewById(R.id.btnexca);
+        btnroller = findViewById(R.id.btnroller);
+        btndozer = findViewById(R.id.btndozer);
+        btnbreakerexca = findViewById(R.id.btnbreakerexca);
+        btnforklift = findViewById(R.id.btnforklift);
+        btnlift = findViewById(R.id.btnlift);
+    }
+
     public void exca  () {
-        Intent pindahexa = new Intent(beranda.this,bucketexca.class);
-        startActivity(pindahexa);
+        Intent pindahexca = new Intent(beranda.this,bucketexca.class);
+        startActivity(pindahexca);
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,14 +36,7 @@ public class beranda extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_beranda);
 
-        btnexca = findViewById(R.id.btnexca);
-        btnroller = findViewById(R.id.btnroller);
-        btndozer = findViewById(R.id.btndozer);
-        btnbreakerexca = findViewById(R.id.btnbreakerexca);
-        btnforklift = findViewById(R.id.btnforklift);
-        btnlift = findViewById(R.id.btnlift);
-
-
+        sumber();
 
         btnexca.setOnClickListener(new View.OnClickListener() {
             @Override
