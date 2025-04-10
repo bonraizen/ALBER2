@@ -85,7 +85,7 @@
                     android:layout_gravity="end"
                     android:background="@color/blue_button"
                     android:text="Detail"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#82B1FF" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
