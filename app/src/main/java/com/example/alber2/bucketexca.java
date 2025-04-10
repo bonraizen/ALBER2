@@ -13,10 +13,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class bucketexca extends AppCompatActivity {
 
-    Button DetExca5tnKlbe,DetExca5tnCat,DetExca5tnKmtsu;
+    Button detexca5tnklbco,DetExca5tnCat,DetExca5tnKmtsu;
 
     public void sumber(){
-        DetExca5tnKlbe = findViewById(R.id.DetExca5tnKlbe);
+        detexca5tnklbco = findViewById(R.id.detexca5tnklbco);
         DetExca5tnCat = findViewById(R.id.DetExca5tnCat);
         DetExca5tnKmtsu = findViewById(R.id.DetExca5tnKmtsu);
 
@@ -30,11 +30,11 @@ public class bucketexca extends AppCompatActivity {
 
         sumber();
 
-        DetExca5tnKlbe.setOnClickListener(new View.OnClickListener() {
+        detexca5tnklbco.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent detexca5tnklbco = new Intent(getApplicationContext(),dtMiniExc5tn_kblco.class);
-                startActivity(detexca5tnklbco);
+                Intent detilexca5tnklbco = new Intent(bucketexca.this,dtMiniExc5tn_kblco.class);
+                startActivity(detilexca5tnklbco);
             }
         });
 
