@@ -17,7 +17,6 @@ public class bucketexca extends AppCompatActivity {
 
     public void sumber(){
         detexcatnklbco = findViewById(R.id.detexcatnklbco);
-
     }
 
     @Override
