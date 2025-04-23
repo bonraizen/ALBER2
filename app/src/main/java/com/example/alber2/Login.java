@@ -45,8 +45,8 @@ public class Login extends AppCompatActivity {
 
         masukan();
 
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        database = firebaseDatabase.getReference("users");
+        database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://sewa-alber-default-rtdb.firebaseio.com/");
+        database = FirebaseDatabase.getInstance().getReference("user");
 
         pindah.setOnClickListener(new View.OnClickListener() {
             @Override
