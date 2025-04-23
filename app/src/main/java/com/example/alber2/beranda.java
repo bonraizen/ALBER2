@@ -30,6 +30,11 @@ public class beranda extends AppCompatActivity {
         Intent pindahexca = new Intent(beranda.this,bucketexca.class);
         startActivity(pindahexca);
     };
+
+    public void dtexca(){
+        Intent dt = new Intent( beranda.this,dtMiniExc5tn_kblco.class);
+        startActivity(dt);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +47,13 @@ public class beranda extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 exca();
+            }
+        });
+
+        btnroller.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dtexca();
             }
         });
 
