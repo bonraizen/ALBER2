@@ -30,7 +30,7 @@ public class Reqorder extends AppCompatActivity {
         Order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Reqorder.this, "Pesananmu Sudah dikirim dan akan Diperoses", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Reqorder.this, "Pesanan Akan diKonfirmasi !!!", Toast.LENGTH_SHORT).show();
             }
         });
 

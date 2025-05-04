@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class beranda extends AppCompatActivity {
 
     ImageButton btnexca,btnroller,btndozer,btnbreakerexca,btnforklift,btnlift;
@@ -30,6 +32,11 @@ public class beranda extends AppCompatActivity {
         Intent pindahexca = new Intent(beranda.this,bucketexca.class);
         startActivity(pindahexca);
     };
+
+    public void dtexca(){
+        Intent dt = new Intent( beranda.this,MainActivity.class);
+        startActivity(dt);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +51,16 @@ public class beranda extends AppCompatActivity {
                 exca();
             }
         });
+
+        btnroller.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                dtexca();
+                finish();
+            }
+        });
+
 
 
 
