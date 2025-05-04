@@ -1,56 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/orange">
+    android:background="#FDE5A3"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="TRACTOR RENTAL COMPANY"
-        android:textSize="32sp"
+        android:layout_marginTop="69dp"
         android:fontFamily="@font/orelega_one"
+        android:text="TRACTOR RENTAL COMPANY"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="69dp"/>
+        android:textSize="32sp"
+        android:textStyle="bold" />
 
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="201dp"
-        android:layout_height="188dp"
+        android:layout_width="238dp"
+        android:layout_height="220dp"
         android:layout_below="@id/titleText"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="53dp"
-        android:layout_marginEnd="102dp"
+        android:layout_marginEnd="89dp"
         android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/excaText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="exca"
-        android:fontFamily="@font/orelega_one"
-        android:textSize="28sp"
         android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true" />
+        android:fontFamily="@font/orelega_one"
+        android:text="exca"
+        android:textSize="28sp" />
 
     <TextView
         android:id="@+id/solutionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="solution to tool limitations"
-        android:textSize="22sp"
         android:layout_below="@id/excaText"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true" />
+        android:fontFamily="@font/orelega_one"
+        android:text="solution to tool limitations"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="22sp" />
 
     <Button
         android:id="@+id/startButton"
@@ -59,9 +61,10 @@
         android:layout_below="@id/solutionText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:backgroundTint="@android:color/black"
+        android:backgroundTint="#F49D52"
         android:text="Let’s get Started"
-        android:textColor="@android:color/white" />
+        android:textStyle="bold"
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/accountText"
@@ -70,24 +73,24 @@
         android:layout_below="@id/startButton"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="37dp"
+        android:layout_marginStart="91dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="110dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="143dp"
         android:text="Already have account?"
-        android:textColor="#B5B5B5"
+        android:textColor="#000000"
         android:textSize="18sp" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:layout_toRightOf="@+id/accountText"
         android:layout_below="@+id/startButton"
-        android:textColor="@color/blue_button"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="-12dp"
+        android:layout_toRightOf="@+id/accountText"
         android:background="@android:color/transparent"
         android:text="sign in"
-        />
+        android:textColor="@color/blue_button" />
 
 </RelativeLayout>

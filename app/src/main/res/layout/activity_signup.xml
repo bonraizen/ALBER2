@@ -1,188 +1,230 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp"
-    android:background="@color/orange">
+    android:background="#FDE5A3">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="20dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
 
+        <!-- Bagian atas dengan shape -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <View
+                android:layout_width="214dp"
+                android:layout_height="232dp"
+                android:layout_gravity="top|start"
+                android:background="@drawable/top_half_circle"
+                android:translationX="-50dp"
+                android:translationY="-100dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GET\nSTARTED NOW!"
+                android:fontFamily="@font/orelega_one"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_gravity="start|center_vertical"
+                android:paddingStart="20dp" />
+        </FrameLayout>
+
+        <!-- Container form -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:background="@drawable/form_background"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp">
 
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="20dp"
-                android:text="GET STARTED NOW!"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/signUpTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:text="Sign Up"
-                android:textColor="@android:color/white"
-                android:textSize="20sp" />
-
+            <!-- Nama -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nama" />
+                android:text="NAMA"
+                android:textColor="#000000"
+                android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/etnama"
+                android:id="@+id/etNama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:hint="xxxxx"
+                android:hint="ketik disini"
+                android:backgroundTint="#000000"
                 android:inputType="text"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:layout_marginTop="4dp"
+                android:padding="10dp" />
 
+            <!-- Nama Perusahaan -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nama Perusahaan" />
+                android:text="NAMA PERUSAHAAN"
+                android:textColor="#000000"
+                android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/etnamaPerusahaan"
+                android:id="@+id/etNamaPerusahaan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:hint="ketik disini"
+                android:backgroundTint="#000000"
                 android:inputType="text"
-                android:hint="xxxxx"
-                android:minHeight="70dp" />
+                android:minHeight="48dp"
+                android:layout_marginTop="4dp"
+                android:padding="10dp" />
 
+            <!-- Nomor Telepon -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No telepon" />
+                android:text="NOMOR TELEPON"
+                android:textColor="#000000"
+                android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/etnomorTelepon"
+                android:id="@+id/etNomorTelepon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:inputType="number"
-                android:hint="08xxxxx"
-                android:minHeight="48dp" />
+                android:hint="ketik disini"
+                android:backgroundTint="#000000"
+                android:inputType="phone"
+                android:minHeight="48dp"
+                android:layout_marginTop="4dp"
+                android:padding="10dp" />
 
+            <!-- Email -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email Perusahaan" />
+                android:text="EMAIL"
+                android:textColor="#000000"
+                android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/etemail"
+                android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:hint="ketik disini"
+                android:backgroundTint="#000000"
                 android:inputType="textEmailAddress"
-                android:hint="xxxx@.com"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:layout_marginTop="4dp"
+                android:padding="10dp" />
 
+            <!-- NIK -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nik KTP" />
+                android:text="NIK KTP"
+                android:textColor="#000000"
+                android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/etnikKTP"
+                android:id="@+id/etNikKtp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:hint="ketik disini"
+                android:backgroundTint="#000000"
                 android:inputType="number"
-                android:hint="xxxxx"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:layout_marginTop="4dp"
+                android:padding="10dp" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="Foto Ktp" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                tools:srcCompat="@tools:sample/avatars" />
-
-            <Button
-                android:id="@+id/btnpil"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="pilih foto" />
-
+            <!-- Upload Foto -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Password" />
+                android:text="UPLOAD FOTO KTP"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp" />
 
-            <EditText
-                android:id="@+id/etcreatePassword"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/btnUploadFoto"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:hint="xxxxx"
-                android:inputType="textPassword"
-                android:minHeight="48dp" />
+                android:text="📁 add file" />
 
+            <!-- Password -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Konfirmasi Passwordd" />
+                android:text="CREATE PASSWORD"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp" />
 
             <EditText
-                android:id="@+id/etconfirmPassword"
+                android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:hint="CONFIRM PASSWORD"
+                android:hint="ketik disini"
+                android:backgroundTint="#000000"
                 android:inputType="textPassword"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:layout_marginTop="4dp"
+                android:padding="10dp" />
 
-            <Button
-                android:id="@+id/btnsignup"
+            <!-- Confirm Password -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONFIRM PASSWORD"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:id="@+id/etConfirmPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:hint="ketik disini"
+                android:backgroundTint="#000000"
+                android:inputType="textPassword"
+                android:minHeight="40dp"
+                android:layout_marginTop="4dp"
+                android:padding="10dp" />
+
+            <!-- Tombol Sign Up -->
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#E47F61"
                 android:text="Sign Up" />
 
-            <TextView
+            <!-- Link ke Sign In -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="37dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:text="Already have an account?"
-                android:textColor="@android:color/holo_blue_light" />
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btnlogin"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginLeft="190dp"
-                android:backgroundTint="#4422bf"
-                android:text="sign in"
-                android:layout_marginBottom="200dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already have account? " />
+
+                <TextView
+                    android:id="@+id/tvSignIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SIGN IN"
+                    android:textColor="#4422BF"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
         </LinearLayout>
-    </ScrollView>
-
-</RelativeLayout>
+    </LinearLayout>
+</ScrollView>
