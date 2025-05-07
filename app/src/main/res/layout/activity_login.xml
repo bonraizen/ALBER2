@@ -130,12 +130,13 @@
                         android:layout_height="wrap_content"
                         android:text="Don’t have account? " />
 
-                    <TextView
+                    <Button
                         android:id="@+id/tvSignUp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sign Up"
-                        android:textColor="#E47F61"
+                        android:textColor="@color/blue_button"
+                        android:backgroundTint="@color/tranparent"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
