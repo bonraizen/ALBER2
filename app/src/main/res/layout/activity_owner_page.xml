@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDE5A3"
+    tools:context=".owner_page">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FDE5A3"
+
+        tools:ignore="ExtraText">
+
+        <TextView
+            android:id="@+id/profileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile Admin"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="16dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/profileTitle"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/round_add_photo_alternate_24" <!-- Ganti dengan nama gambar Anda -->
+        android:background="@android:color/white"
+        android:padding="8dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="circleCrop"/>
+
+        <EditText
+            android:id="@+id/companyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profileImage"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"
+            android:hint="NAMA PERUSAHAAN"
+            android:padding="12dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/companyName"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"
+            android:hint="NOMOR TELEPON"
+            android:padding="12dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/accountNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneNumber"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"
+            android:hint="NOMOR REKENING"
+            android:padding="12dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountNumber"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"
+            android:hint="ALAMAT"
+            android:padding="12dp"
+            android:textColor="@android:color/black"/>
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/address"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:text="BACK"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+
+</ScrollView>
