@@ -35,9 +35,9 @@ public class Login extends AppCompatActivity {
 
     private void masukan() {
         pindah = findViewById(R.id.btnsignup);
-        signin = findViewById(R.id.btnLogin);
-        email_input = findViewById(R.id.etLoginEmail);
-        password_input = findViewById(R.id.etLoginPassword);
+        signin = findViewById(R.id.sign_in_button);
+        email_input = findViewById(R.id.email_input);
+        password_input = findViewById(R.id.password_input);
 
     }
 
