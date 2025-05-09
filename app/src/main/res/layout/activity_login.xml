@@ -7,7 +7,7 @@
     android:padding="16dp"
     android:id="@+id/main"
     tools:context=".Login"
-    android:background="@color/orange">
+    android:background="#FDE5A3">
 
     <ImageButton
         android:id="@+id/btnback"

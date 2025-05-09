@@ -8,7 +8,7 @@
     android:padding="16dp"
     android:orientation="vertical"
     tools:context=".dtMiniExc5tn_kblco"
-    android:background="@color/orange">
+    android:background="#FDE5A3">
 
     <ScrollView
         android:layout_width="match_parent"

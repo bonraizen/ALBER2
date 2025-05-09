@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="40dp"
         android:orientation="vertical"
-        android:background="#FDD835"
+        android:background="#FDE5A3"
         android:padding="16dp"
         >
 
@@ -98,7 +98,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Detail"
-                    android:backgroundTint="@color/orange"/>
+                    android:backgroundTint="#F49D52"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

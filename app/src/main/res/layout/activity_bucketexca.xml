@@ -102,7 +102,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Detail"
-                    android:backgroundTint="@color/orange"/>
+                    android:backgroundTint="#F49D52"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -162,7 +162,7 @@
                     android:id="@+id/btnexcat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/orange"
+                    android:backgroundTint="#F49D52"
                     android:text="Detail" />
 
             </LinearLayout>
@@ -223,7 +223,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Detail"
-                    android:backgroundTint="@color/orange"/>
+                    android:backgroundTint="#F49D52"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

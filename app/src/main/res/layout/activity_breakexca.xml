@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="40dp"
         android:orientation="vertical"
-        android:background="#FDD835"
+        android:background="#FDE5A3"
         android:padding="16dp"
         >
 
