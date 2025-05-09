@@ -34,11 +34,10 @@
             android:layout_height="80dp"
             android:layout_below="@id/profileTitle"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/round_add_photo_alternate_24" <!-- Ganti dengan nama gambar Anda -->
+            android:src="@drawable/round_add_photo_alternate_24"
         android:background="@android:color/white"
         android:padding="8dp"
-        android:layout_marginTop="16dp"
-        android:scaleType="circleCrop"/>
+        android:layout_marginTop="16dp"/>
 
         <EditText
             android:id="@+id/companyName"

@@ -37,28 +37,32 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:hint="Nama Lengkap"
+            android:minHeight="48dp"
             android:nextFocusLeft="@id/nama" />
 
         <EditText
             android:id="@+id/nama_perusahaan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:hint="Nama Perusahaan"
-            android:layout_marginBottom="8dp" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:hint="Email"
-            android:layout_marginBottom="8dp" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/nomor_telpon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:hint="Nomor Telp"
-            android:layout_marginBottom="16dp" />
+            android:minHeight="48dp" />
 
         <TextView
             android:id="@+id/detail_alat"
@@ -73,8 +77,9 @@
             android:id="@+id/alat_yang_diperlukan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/alat_options"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:entries="@array/jk_alber"
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/spesifikasi_alat"
@@ -89,22 +94,25 @@
             android:id="@+id/tanggal_mulai_sewa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:hint="Tanggal Mulai Sewa"
-            android:layout_marginBottom="8dp" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/lama_sewa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:hint="Lama Sewa"
-            android:layout_marginBottom="8dp" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/lokasi_proyek"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:hint="Lokasi Proyek"
-            android:layout_marginBottom="16dp" />
+            android:minHeight="48dp" />
 
         <Button
             android:id="@+id/btn_kirim"

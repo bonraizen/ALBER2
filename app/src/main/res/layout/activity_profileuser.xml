@@ -23,10 +23,10 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/round_add_photo_alternate_24"  <!-- Ganti dengan image yang sesuai -->
-        android:background="@android:color/white"
-        android:padding="16dp"
-        android:scaleType="centerCrop"/>
+            android:src="@drawable/round_add_photo_alternate_24"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            android:scaleType="centerCrop"/>
 
         <!-- Name Label -->
         <TextView
@@ -101,7 +101,7 @@
             android:layout_height="wrap_content"
             android:text="No Tlp    : "
             android:textSize="18sp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="4dp"/>
         <TextView
             android:id="@+id/notlp"
             android:layout_below="@+id/lbemail"
@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:text="ini"
             android:textSize="18sp"
-            android:layout_marginTop="4dp" />/>
+            android:layout_marginTop="4dp" />
 
         <!-- History Order Section -->
         <TextView
