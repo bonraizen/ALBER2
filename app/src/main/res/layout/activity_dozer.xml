@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".breakexca">
+    tools:context=".dozer">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="40dp"
         android:orientation="vertical"
-        android:background="#FDD835"
+        android:background="#FDE5A3"
         android:padding="16dp"
         >
 
@@ -29,7 +29,7 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BREAKER EXCAVATOR"
+            android:text="DOZER"
             android:layout_marginLeft="100dp"
             android:textColor="#000000"
             android:textSize="24sp"
@@ -38,7 +38,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Breaker adalah attachment tambahan yang membuat excavator menjadi lebih mampu lagi. "
+            android:text="Dozer bisa mendorong tanah dan sejenisnya dalam volume besar dalam waktu singkat "
             android:textSize="14sp"
             android:textColor="#000000"
             android:layout_marginBottom="16dp"/>
@@ -67,7 +67,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="7.5-ton Komatsu Excavator + Breaker"
+                    android:text="8-ton Dozer Komatsu D31P"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#000000"/>
@@ -128,7 +128,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5-ton Kubota Excavator + Breaker"
+                    android:text="4-ton Dozer Komatsu D21P-7E"
                     android:textColor="#000000"
                     android:textSize="18sp"
                     android:textStyle="bold" />
