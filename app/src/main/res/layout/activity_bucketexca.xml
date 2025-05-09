@@ -60,9 +60,10 @@
                 android:padding="16dp">
 
                 <ImageView
+
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@drawable/excavator_kobelco"
+                    android:src="@drawable/exsakobelko"
                     android:scaleType="centerCrop"
                     android:contentDescription="@string/excavator_kobelco"/>
 
@@ -123,45 +124,46 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@drawable/excavator_cat"
-                    android:scaleType="centerCrop"
-                    android:contentDescription="@string/excavator_cat"/>
+                    android:contentDescription="@string/excavator_cat"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/exsacat" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Mini Excavator, 5 Ton, Cat"
+                    android:textColor="#000000"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#000000"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Harga Sewa per Jam: Rp170.000,-"
-                    android:textSize="14sp"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Minimum Sewa: 50 Jam"
-                    android:textSize="14sp"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:text="Harian Operator: Rp250.000,-"
-                    android:textSize="14sp"
                     android:textColor="#000000"
-                    android:layout_marginBottom="16dp"/>
+                    android:textSize="14sp" />
 
                 <Button
+                    android:id="@+id/btnexcat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Detail"
-                    android:backgroundTint="@color/orange"/>
+                    android:backgroundTint="@color/orange"
+                    android:text="Detail" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -182,9 +184,9 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@drawable/excavator_komatsu"
-                    android:scaleType="centerCrop"
-                    android:contentDescription="@string/excavator_komatsu"/>
+                    android:contentDescription="@string/excavator_komatsu"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/exsakomatsu" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -217,6 +219,7 @@
                     android:layout_marginBottom="16dp"/>
 
                 <Button
+                    android:id="@+id/btnexkmts"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Detail"
