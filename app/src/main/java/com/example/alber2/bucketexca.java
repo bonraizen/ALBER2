@@ -16,7 +16,7 @@ public class bucketexca extends AppCompatActivity {
     Button detexcatnklbco;
 
     public void sumber(){
-        detexcatnklbco = findViewById(R.id.detexcatnklbco);
+        detexcatnklbco = findViewById(R.id.btnexkobel);
     }
 
     @Override
