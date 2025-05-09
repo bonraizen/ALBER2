@@ -30,15 +30,15 @@ public class SignUp extends AppCompatActivity {
     private EditText etnama, etnamaPerusahaan, etnomorTelepon, etemail, etnikKTP, etcreatePassword, etconfirmPassword;
 
     public void sumber() {
-        btnlogin = findViewById(R.id.btnlogin);
-        btnsignup = findViewById(R.id.btnsignup);
-        etnama = findViewById(R.id.etnama);
-        etnamaPerusahaan = findViewById(R.id.etnamaPerusahaan);
-        etnomorTelepon = findViewById(R.id.etnomorTelepon);
-        etemail = findViewById(R.id.etemail);
-        etnikKTP = findViewById(R.id.etnikKTP);
-        etcreatePassword = findViewById(R.id.etcreatePassword);
-        etconfirmPassword = findViewById(R.id.etconfirmPassword);
+        btnlogin = findViewById(R.id.sign_in_button);
+        btnsignup = findViewById(R.id.btnSignUp);
+        etnama = findViewById(R.id.etNama);
+        etnamaPerusahaan = findViewById(R.id.etNamaPerusahaan);
+        etnomorTelepon = findViewById(R.id.etNomorTelepon);
+        etemail = findViewById(R.id.etEmail);
+        etnikKTP = findViewById(R.id.etNikKtp);
+        etcreatePassword = findViewById(R.id.etPassword);
+        etconfirmPassword = findViewById(R.id.etConfirmPassword);
     }
 
     @Override
@@ -71,7 +71,7 @@ public class SignUp extends AppCompatActivity {
             String createPassword = etcreatePassword.getText().toString();
             String confirmPassword = etconfirmPassword.getText().toString();
 
-            if (nama.isEmpty() || createPassword.isEmpty() || confirmPassword.isEmpty()) {
+            if (nama.isEmpty() || createPassword.isEmpty() || confirmPassword.isEmpty() || nomorTelepon.isEmpty() || nikKTP.isEmpty() ) {
                 Toast.makeText(SignUp.this, "Tidak boleh ada form yang kosong", Toast.LENGTH_SHORT).show();
             } else if (!createPassword.equals(confirmPassword)) {
                 Toast.makeText(SignUp.this, "Konfirmasi password tidak sesuai", Toast.LENGTH_SHORT).show();
@@ -92,7 +92,9 @@ public class SignUp extends AppCompatActivity {
                                                 DatabaseReference userRef = database.child(email.replace(".", "_"));
                                                 userRef.child("nama").setValue(nama);
                                                 userRef.child("namaPerusahaan").setValue(namaPerusahaan);
+                                                userRef.child("nomorTelepon").setValue(nomorTelepon);
                                                 userRef.child("email").setValue(email);
+                                                userRef.child("nikKTP").setValue(nikKTP);
                                                 userRef.child("password").setValue(createPassword);
 
                                                 Toast.makeText(SignUp.this, "Pendaftaran berhasil. Silakan periksa email Anda untuk verifikasi.",

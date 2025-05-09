@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="40dp"
         android:orientation="vertical"
-        android:background="#FDD835"
+        android:background="#FDE5A3"
         android:padding="16dp"
         >
 
@@ -65,7 +65,7 @@
                     android:layout_height="200dp"
                     android:src="@drawable/exsakobelko"
                     android:scaleType="centerCrop"
-                    android:contentDescription="@string/excavator_kobelco"/>
+                    android:contentDescription=""/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -124,7 +124,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:contentDescription="@string/excavator_cat"
+                    android:contentDescription=""
                     android:scaleType="fitCenter"
                     android:src="@drawable/exsacat" />
 
@@ -184,7 +184,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:contentDescription="@string/excavator_komatsu"
+                    android:contentDescription=""
                     android:scaleType="fitCenter"
                     android:src="@drawable/exsakomatsu" />
 

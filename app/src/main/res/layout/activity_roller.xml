@@ -59,9 +59,8 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@drawable/exsakobelko"
-                    android:scaleType="centerCrop"
-                    />
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/vibrol" />
 
                 <TextView
                     android:layout_width="wrap_content"

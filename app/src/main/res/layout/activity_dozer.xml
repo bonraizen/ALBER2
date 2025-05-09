@@ -60,9 +60,9 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@drawable/exsakobelko"
+                    android:contentDescription="@string/excavator_kobelco"
                     android:scaleType="centerCrop"
-                    android:contentDescription="@string/excavator_kobelco"/>
+                    android:src="@drawable/doser" />
 
                 <TextView
                     android:layout_width="wrap_content"
