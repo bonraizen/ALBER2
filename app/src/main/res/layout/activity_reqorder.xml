@@ -22,15 +22,18 @@
             android:text="Pengajuan"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:textColor="@color/black"
             android:layout_marginBottom="16dp" />
 
         <TextView
-            android:id="@+id/nama"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textSize="20dp"
-            android:text="Nama Lengkap"/>
 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nama"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
         <EditText
             android:id="@+id/nama_lengkap"
             android:layout_width="170dp"
@@ -38,7 +41,17 @@
             android:layout_marginBottom="8dp"
             android:hint="Nama Lengkap"
             android:minHeight="48dp"
-            android:nextFocusLeft="@id/nama" />
+            android:textColor="@color/black"/>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nama perusahaan"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
 
         <EditText
             android:id="@+id/nama_perusahaan"
@@ -46,7 +59,18 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:hint="Nama Perusahaan"
+            android:textColor="@color/black"
             android:minHeight="48dp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
 
         <EditText
             android:id="@+id/email"
@@ -54,7 +78,18 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:hint="Email"
+            android:textColor="@color/black"
             android:minHeight="48dp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="no telp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
 
         <EditText
             android:id="@+id/nomor_telpon"
@@ -62,24 +97,45 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:hint="Nomor Telp"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textColor="@color/black"/>
 
         <TextView
-            android:id="@+id/detail_alat"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DETAIL ALAT"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/black"/>
 
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jenis"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
         <Spinner
             android:id="@+id/alat_yang_diperlukan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:entries="@array/jk_alber"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textColor="@color/black"/>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="catatan"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
 
         <EditText
             android:id="@+id/spesifikasi_alat"
@@ -88,31 +144,62 @@
             android:hint="Spesifikasi Alat"
             android:layout_marginBottom="8dp"
             android:gravity="top|start"
-            android:inputType="textMultiLine" />
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"/>
 
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tanggal sewa"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
         <EditText
             android:id="@+id/tanggal_mulai_sewa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:hint="Tanggal Mulai Sewa"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textColor="@color/black"/>
 
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lama sewa"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
         <EditText
             android:id="@+id/lama_sewa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:hint="Lama Sewa"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textColor="@color/black"/>
 
+        <TextView
+            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lokasi sewa"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
         <EditText
             android:id="@+id/lokasi_proyek"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:hint="Lokasi Proyek"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textColor="@color/black"/>
 
         <Button
             android:id="@+id/btn_kirim"

@@ -18,7 +18,7 @@ public class dtMiniExc5tn_kblco extends AppCompatActivity {
 
 
     public void sumber(){
-
+    btnreqorder = findViewById(R.id.btnreqorder);
     }
 
     @Override
@@ -27,6 +27,15 @@ public class dtMiniExc5tn_kblco extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_dt_mini_exc5tn_kblco);
 
+        sumber();
 
+        btnreqorder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent reqorder = new Intent(dtMiniExc5tn_kblco.this,Reqorder.class);
+                startActivity(reqorder);
+                finish();
+            }
+        });
     }
-}
+    }

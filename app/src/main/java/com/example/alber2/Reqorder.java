@@ -16,7 +16,7 @@ public class Reqorder extends AppCompatActivity {
     Button Order;
 
     public void sumber(){
-        Order = findViewById(R.id.Order);
+        Order = findViewById(R.id.btn_kirim);
     }
 
     @Override
