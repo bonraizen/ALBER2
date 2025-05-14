@@ -57,10 +57,7 @@ public class SignUp extends AppCompatActivity {
 
         sumber();
 
-        btnlogin.setOnClickListener(v -> {
-            Intent pindahlogin = new Intent(SignUp.this, Login.class);
-            startActivity(pindahlogin);
-        });
+
 
         btnsignup.setOnClickListener(v -> {
             String nama = etnama.getText().toString();

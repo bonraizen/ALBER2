@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:id="@+id/main"
     tools:context=".SignUp"
+    android:orientation="vertical"
     android:background="#FDE5A3">
 
     <LinearLayout
@@ -30,7 +31,6 @@
             android:background="@drawable/form_background"
             android:orientation="vertical"
             android:padding="20dp"
-            android:layout_alignParentBottom="true"
             android:layout_marginBottom="32dp">
 
 

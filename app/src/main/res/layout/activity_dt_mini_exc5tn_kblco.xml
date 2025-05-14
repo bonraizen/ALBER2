@@ -201,11 +201,68 @@
 
             </TableLayout>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+                    <EditText
+                        android:id="@+id/etdtgl"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:hint="tanggal"
+                        android:inputType="date"
+                        android:textSize="20sp"
+                        android:minHeight="48dp">
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/ettersedia"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_toRightOf="@+id/etdtgl"
+                        android:hint="."
+                        android:textSize="20sp"
+                        android:inputType="text"
+                        android:minHeight="48dp"></EditText>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Tersedia"
+                        android:textSize="20sp"
+                        android:layout_toRightOf="@+id/ettersedia"
+                        >
+                    </TextView>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/etdtgl"
+                        android:gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginLeft="170dp"
+                        android:backgroundTint="#F49D52"
+                        android:text="cek"></Button>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="130dp"
-                android:layout_marginStart="140dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="50dp"
                 app:cardBackgroundColor="@color/white">
@@ -231,27 +288,6 @@
                     android:textSize="13dp"
                     tools:ignore="SpUsage,TextSizeCheck" />
             </androidx.cardview.widget.CardView>
-
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </TableLayout>
 
         </LinearLayout>
     </ScrollView>

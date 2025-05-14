@@ -42,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Menggali, memindahkan, dan meratakan tanah. Excavator juga dapat digunakan untuk mengeruk sungai, menancapkan pondasi, dan memecahkan batu."
+            android:textAlignment="center"
             android:textSize="14sp"
             android:textColor="#000000"
             android:layout_marginBottom="16dp"/>
