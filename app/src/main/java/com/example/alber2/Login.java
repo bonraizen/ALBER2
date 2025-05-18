@@ -26,7 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Login extends AppCompatActivity {
 
     private DatabaseReference database;
-    Button pindah ;
+    Button pindah,btnlupaPassword ;
 
     private EditText email_input, password_input;
     String email, password;
@@ -35,9 +35,22 @@ public class Login extends AppCompatActivity {
 
     private void masukan() {
         pindah = findViewById(R.id.btnsignup);
+        btnlupaPassword = findViewById(R.id.btnlupaPassword);
         signin = findViewById(R.id.sign_in_button);
         email_input = findViewById(R.id.email_input);
         password_input = findViewById(R.id.password_input);
+
+    }
+
+    private void move (){
+        pindah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pindahsignup = new Intent(Login.this, SignUp.class);
+                startActivity(pindahsignup);
+                finish();
+            }
+        });
 
     }
 
@@ -47,20 +60,14 @@ public class Login extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
+        btnlupaPassword.setVisibility(View.INVISIBLE);
         masukan();
 
         database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://sewa-alber-default-rtdb.firebaseio.com/");
         database = FirebaseDatabase.getInstance().getReference("user");
 
 
-        pindah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent pindahsignup = new Intent(Login.this, SignUp.class);
-                startActivity(pindahsignup);
-                finish();
-            }
-        });
+
 
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,7 +96,7 @@ public class Login extends AppCompatActivity {
 
 
 
-//        // Query the database for the entered email
+        // Query the database for the entered email
 //        database.orderByChild("email").equalTo(email).addListenerForSingleValueEvent(new ValueEventListener() {
 //            @Override
 //            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -117,21 +124,38 @@ public class Login extends AppCompatActivity {
 //        });
 
         FirebaseAuth auth = FirebaseAuth.getInstance();
-        auth.signInWithEmailAndPassword(email,password)
-                .addOnCompleteListener(task -> {
-                    if (task.isSuccessful()){
-                        startActivity(new Intent(this,beranda.class));
-                        finish();
-                    }else {
+            auth.signInWithEmailAndPassword(email,password)
+            .addOnCompleteListener(task -> {
+                if (task.isSuccessful()){
+                    startActivity(new Intent(this,beranda.class));
+                    finish();
+                }else {
+                    final int maxRetries = 3;
+                    for (int attempt = 1; attempt <= maxRetries; attempt++) {
                         Exception e = task.getException();
                         Log.d("LoginActivity", "Email yang dicoba: " + email);
                         Log.d("LoginActivity", "Password yang dicoba: " + password);
-                        if (e != null){
-                        Toast.makeText(this, "Login gagal"+ e.getMessage(), Toast.LENGTH_SHORT).show();
-                        Log.e("w", "w", e);
+                        if (e != null) {
+                            Toast.makeText(this, "Login gagal" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            Log.e("w", "error", e);
+                        }
+                        if (!task.isSuccessful() && attempt <= maxRetries) {
+                            try {
+                                Thread.sleep(3000);
+                                Toast.makeText(this, "Email atau Password Mungkain Salah "+"/tTunggu 3 detik", Toast.LENGTH_SHORT).show();
+                            } catch (InterruptedException ex) {
+                                Thread.currentThread().interrupt();
+                            }
+                        }else{
+                            btnlupaPassword.setVisibility(View.VISIBLE);
+                            break;
                         }
                     }
-                });
+                }
+            });
+
+
+
 
     }
 }
