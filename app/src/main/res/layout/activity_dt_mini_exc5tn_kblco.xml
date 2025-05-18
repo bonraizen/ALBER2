@@ -58,6 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Harga Sewa per Jam"
+                android:layout_marginLeft="60dp"
                 android:textStyle="bold"
                 android:textColor="#000000"
                 android:layout_marginTop="16dp"
@@ -66,22 +67,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
                 android:text="Rp170.000,-"
                 android:textColor="#000000"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Minimum Sewa"
-                android:textStyle="bold"
                 android:textColor="#000000"
-                android:layout_marginTop="8dp"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="50 Jam"
-                android:textColor="#000000"/>
+                android:textColor="#000000" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -210,17 +212,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     >
-                    <EditText
-                        android:id="@+id/etdtgl"
-                        android:layout_width="170dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="30dp"
-                        android:hint="tanggal"
-                        android:inputType="date"
-                        android:textSize="20sp"
-                        android:minHeight="48dp">
-                    </EditText>
 
                     <EditText
                         android:id="@+id/ettersedia"
@@ -228,7 +219,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="30dp"
-                        android:layout_toRightOf="@+id/etdtgl"
                         android:hint="."
                         android:textSize="20sp"
                         android:inputType="text"
@@ -247,10 +237,10 @@
                     <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/etdtgl"
+                        android:layout_below="@+id/ettersedia"
                         android:gravity="center"
-                        android:layout_marginTop="50dp"
-                        android:layout_marginLeft="170dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="110dp"
                         android:backgroundTint="#F49D52"
                         android:text="cek"></Button>
 
