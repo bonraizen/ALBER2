@@ -1,200 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.gravitas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFF2A0"
+    android:padding="16dp"
     tools:context=".profileuser">
 
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFF2A0"
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@android:color/white"
         android:padding="16dp"
-        tools:ignore="ExtraText">
+        android:scaleType="centerCrop"
+        android:src="@drawable/round_add_photo_alternate_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
+    <LinearLayout
+        android:id="@+id/info_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_label">
 
-        <!-- Profile Image -->
-        <ImageView
-            android:id="@+id/profile_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/round_add_photo_alternate_24"
-            android:background="@android:color/white"
-            android:padding="16dp"
-            android:scaleType="centerCrop"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <!-- Name Label -->
-        <TextView
-            android:id="@+id/name_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/profile_image"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:text="name"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <!-- Information -->
-        <TextView
-            android:id="@+id/nama_label"
-            android:layout_below="@id/name_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nama    :"
-            android:textSize="18sp"
-            android:layout_marginTop="8dp" />
-
-        <TextView
-            android:id="@+id/Nama"
-            android:layout_below="@id/name_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/nama_label"
-            android:text="ini"
-            android:textSize="18sp"
-            android:layout_marginTop="8dp" />
-        <TextView
-            android:id="@+id/corp_label"
-            android:layout_below="@id/nama_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Perusahaan :"
-            android:textSize="18sp"
-            android:layout_marginTop="4dp" />
-        <TextView
-            android:id="@+id/korporat"
-            android:layout_below="@id/nama_label"
-            android:layout_toRightOf="@id/corp_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ini"
-            android:textSize="18sp"
-            android:layout_marginTop="4dp" />
-        <TextView
-            android:id="@+id/lbemail"
-            android:layout_below="@id/corp_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email    : "
-            android:textSize="18sp"
-            android:layout_marginTop="4dp" />
-        <TextView
-            android:id="@+id/email"
-            android:layout_below="@id/corp_label"
-            android:layout_toRightOf="@+id/lbemail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="itu "
-            android:textSize="18sp"
-            android:layout_marginTop="4dp" />
-
-        <TextView
-            android:id="@+id/lbtlp"
-            android:layout_below="@+id/lbemail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="No Tlp    : "
-            android:textSize="18sp"
-            android:layout_marginTop="4dp"/>
-        <TextView
-            android:id="@+id/notlp"
-            android:layout_below="@+id/lbemail"
-            android:layout_toRightOf="@+id/lbtlp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ini"
-            android:textSize="18sp"
-            android:layout_marginTop="4dp" />
-
-        <!-- History Order Section -->
-        <TextView
-            android:id="@+id/history_order_label"
-            android:layout_below="@id/lbtlp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="HISTORY ORDER"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp" />
-
-        <!-- Table for History Order -->
-        <ScrollView
-            android:id="@+id/tblhistory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/history_order_label">
-            <RelativeLayout
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:text="Nama        :"
+                android:textSize="18sp"
+                android:minEms="8" /> <TextView
+            android:id="@+id/Nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perusahaan :"
+                android:textSize="18sp"
+                android:minEms="8" />
+
+            <TextView
+                android:id="@+id/korporat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="."
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email        : "
+                android:textSize="18sp"
+                android:minEms="8" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="."
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Tlp       : "
+                android:textSize="18sp"
+                android:minEms="8" />
+
+            <TextView
+                android:id="@+id/notlp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="."
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/history_order_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="HISTORY ORDER"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_layout" />
+
+    <ScrollView
+        android:id="@+id/tblhistory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/history_order_label">
+
         <TableLayout
             android:id="@+id/table_history"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp">
+            android:layout_height="wrap_content">
 
             <TableRow>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
+                    android:padding="8dp"
                     android:text="No"
-                    android:padding="8dp" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="2"
+                    android:padding="8dp"
                     android:text="Jenis ALBER"
-                    android:padding="8dp" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="2"
+                    android:padding="8dp"
                     android:text="Tanggal Pengajuan"
-                    android:padding="8dp" />
+                    android:textStyle="bold" />
             </TableRow>
 
-            <!-- You can add more TableRow here for each order history -->
         </TableLayout>
-            </RelativeLayout>
-        </ScrollView>
-        <!-- Back Button -->
-        <Button
-            android:id="@+id/back_button"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:text="BACK"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="@color/orange"
-        android:textColor="@android:color/white"/>
+    </ScrollView>
 
-        <Button
-            android:id="@+id/updateprofpeng"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="167dp"
-            android:layout_marginBottom="470dp"
-            android:layout_toRightOf="@+id/back_button"
-            android:text="ubah" />
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange"
+        android:text="BACK"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/updateprofpeng"
+        app:layout_constraintHorizontal_chainStyle="spread" />
 
-        <Button
-            android:id="@+id/btDelakun"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="15dp"
-            android:layout_marginBottom="0dp"
-            android:layout_toRightOf="@+id/profile_image"
-            android:backgroundTint="#FF0000"
-            android:text="delete akun" />
+    <Button
+        android:id="@+id/updateprofpeng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UBAH"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintEnd_toStartOf="@+id/btDelakun"
+        app:layout_constraintHorizontal_chainStyle="spread" />
 
-    </RelativeLayout>
-
+    <Button
+        android:id="@+id/btDelakun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF0000"
+        android:text="DELETE AKUN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/updateprofpeng"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
