@@ -16,7 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class beranda extends AppCompatActivity {
 
-    ImageButton btnexca,btnroller,btndozer,btnbreakerexca,btnforklift,btnlift;
+    ImageButton btnexca,btnroller,btndozer,btnbreakerexca,btnforklift,btnlift,btnprofiluser;
 
 
     public void sumber (){
@@ -26,6 +26,7 @@ public class beranda extends AppCompatActivity {
         btnbreakerexca = findViewById(R.id.btnbreakerexca);
         btnforklift = findViewById(R.id.btnforklift);
         btnlift = findViewById(R.id.btnlift);
+        btnprofiluser = findViewById(R.id.btnprofiluser);
     }
 
     public void exca  () {
@@ -36,6 +37,11 @@ public class beranda extends AppCompatActivity {
     public void dtexca(){
         Intent dt = new Intent( beranda.this,MainActivity.class);
         startActivity(dt);
+    }
+
+    public void profuser(){
+        Intent usr = new Intent( beranda.this,profileuser.class);
+        startActivity(usr);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +64,13 @@ public class beranda extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 dtexca();
                 finish();
+            }
+        });
+
+        btnprofiluser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                profuser();
             }
         });
 

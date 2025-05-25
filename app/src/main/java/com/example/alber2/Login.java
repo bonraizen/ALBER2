@@ -60,7 +60,6 @@ public class Login extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-        btnlupaPassword.setVisibility(View.INVISIBLE);
         masukan();
 
         database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://sewa-alber-default-rtdb.firebaseio.com/");
@@ -146,6 +145,7 @@ public class Login extends AppCompatActivity {
                             } catch (InterruptedException ex) {
                                 Thread.currentThread().interrupt();
                             }
+                            btnlupaPassword.setVisibility(View.VISIBLE);
                         }else{
                             btnlupaPassword.setVisibility(View.VISIBLE);
                             break;

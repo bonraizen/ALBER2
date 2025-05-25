@@ -117,13 +117,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/arehaveid"
-                android:layout_marginTop="30dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
                 android:backgroundTint="@color/tranparent"
                 android:gravity="center"
                 android:text="LUPA PASSWORD?"
                 android:textColor="@color/blue_button"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:visibility="invisible" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
