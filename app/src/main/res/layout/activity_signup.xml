@@ -15,6 +15,7 @@
 
         <!-- Judul -->
         <TextView
+            android:id="@+id/tvjudul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="GET STARTED NOW!"
@@ -39,13 +40,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/etNama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:hint="ketik disini"
                 android:backgroundTint="#000000"
                 android:inputType="text"
@@ -58,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama Perusahaan"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <EditText
@@ -67,6 +69,7 @@
                 android:layout_height="wrap_content"
                 android:hint="ketik disini"
                 android:backgroundTint="#000000"
+                android:textColor="@color/black"
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:layout_marginTop="4dp"
@@ -77,14 +80,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nomor Telepon"
-                android:textColor="#000000"
-                android:textSize="14sp" />
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                />
 
             <EditText
                 android:id="@+id/etNomorTelepon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="ketik disini"
+                android:textColor="@color/black"
                 android:backgroundTint="#000000"
                 android:inputType="phone"
                 android:minHeight="48dp"
@@ -96,7 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Email"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <EditText
@@ -104,6 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="ketik disini"
+                android:textColor="@color/black"
                 android:backgroundTint="#000000"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
@@ -115,7 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="NIK KTP"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <EditText
@@ -123,15 +129,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="ketik disini"
+                android:textColor="@color/black"
                 android:backgroundTint="#000000"
                 android:inputType="number"
                 android:minHeight="48dp"
                 android:layout_marginTop="4dp"
                 android:padding="10dp" />
 
+            <ImageView
+                android:id="@+id/ivktp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="60dp"
+                android:maxHeight="90dp"
+                android:scaleType="fitCenter" />
             <!-- Upload Foto -->
             <Button
-                android:id="@+id/btnUploadFoto"
+                android:id="@+id/btn_uploadktp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -139,10 +153,11 @@
 
             <!-- Password -->
             <TextView
+                android:id="@+id/tv_creatpass"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Password"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <EditText
@@ -150,6 +165,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="ketik disini"
+                android:textColor="@color/black"
                 android:backgroundTint="#000000"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
@@ -158,10 +174,11 @@
 
             <!-- Confirm Password -->
             <TextView
+                android:id="@+id/tv_conpass"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Konfirmasi Password"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <EditText
@@ -169,12 +186,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="ketik disini"
+                android:textColor="@color/black"
                 android:backgroundTint="#000000"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
                 android:layout_marginTop="4dp"
                 android:padding="10dp" />
 
+            <TextView
+                android:id="@+id/tv_showpass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="right"
+                android:text="Tampilkan Password"
+                android:textColor="@color/blue_button"
+                android:textSize="20sp"/>
             <!-- Tombol Sign Up -->
             <Button
                 android:id="@+id/btnSignUp"
@@ -193,9 +220,12 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/quest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Already have account? " />
+                    android:text="Already have account? "
+                    android:textColor="@color/black"
+                    android:visibility="visible" />
 
                 <TextView
                     android:id="@+id/tvSignIn"
@@ -203,7 +233,8 @@
                     android:layout_height="wrap_content"
                     android:text="SIGN IN"
                     android:textColor="#4422BF"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="visible" />
             </LinearLayout>
 
         </LinearLayout>

@@ -63,17 +63,26 @@
         android:text="PASSWORD"
         android:textColor="#000000"/>
 
+
     <EditText
         android:id="@+id/password_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="10dp"
         android:background="@android:color/darker_gray"
         android:hint="xxxxx"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:padding="10dp"
         android:textColor="#000000" />
+    <TextView
+        android:id="@+id/txtshow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="show password"
+        android:textColor="@color/blue_button"
+        />
 
     <Button
         android:id="@+id/sign_in_button"
@@ -117,13 +126,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/arehaveid"
-                android:layout_marginTop="30dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
                 android:backgroundTint="@color/tranparent"
                 android:gravity="center"
                 android:text="LUPA PASSWORD?"
                 android:textColor="@color/blue_button"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:visibility="invisible" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 

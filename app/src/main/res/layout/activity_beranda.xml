@@ -15,11 +15,22 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <ImageButton
+            android:id="@+id/btnprofiluser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/profiluserdef"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="150dp"
         app:cardBackgroundColor="@color/tranparent"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="10dp"
         app:cardCornerRadius="20dp"
         >
         <LinearLayout

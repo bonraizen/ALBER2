@@ -2,6 +2,7 @@ package com.example.alber2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +29,8 @@ public class Login extends AppCompatActivity {
     private DatabaseReference database;
     Button pindah,btnlupaPassword ;
 
+    private TextView txtshow;
+
     private EditText email_input, password_input;
     String email, password;
     private Button signin;
@@ -39,7 +42,7 @@ public class Login extends AppCompatActivity {
         signin = findViewById(R.id.sign_in_button);
         email_input = findViewById(R.id.email_input);
         password_input = findViewById(R.id.password_input);
-
+        txtshow = findViewById(R.id.txtshow);
     }
 
     private void move (){
@@ -60,7 +63,6 @@ public class Login extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-        btnlupaPassword.setVisibility(View.INVISIBLE);
         masukan();
 
         database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://sewa-alber-default-rtdb.firebaseio.com/");
@@ -130,8 +132,6 @@ public class Login extends AppCompatActivity {
                     startActivity(new Intent(this,beranda.class));
                     finish();
                 }else {
-                    final int maxRetries = 3;
-                    for (int attempt = 1; attempt <= maxRetries; attempt++) {
                         Exception e = task.getException();
                         Log.d("LoginActivity", "Email yang dicoba: " + email);
                         Log.d("LoginActivity", "Password yang dicoba: " + password);
@@ -139,22 +139,36 @@ public class Login extends AppCompatActivity {
                             Toast.makeText(this, "Login gagal" + e.getMessage(), Toast.LENGTH_SHORT).show();
                             Log.e("w", "error", e);
                         }
-                        if (!task.isSuccessful() && attempt <= maxRetries) {
+                        if (!task.isSuccessful()) {
                             try {
                                 Thread.sleep(3000);
                                 Toast.makeText(this, "Email atau Password Mungkain Salah "+"/tTunggu 3 detik", Toast.LENGTH_SHORT).show();
                             } catch (InterruptedException ex) {
                                 Thread.currentThread().interrupt();
                             }
+                            btnlupaPassword.setVisibility(View.VISIBLE);
                         }else{
                             btnlupaPassword.setVisibility(View.VISIBLE);
-                            break;
                         }
-                    }
+
                 }
             });
 
 
+        txtshow.setOnClickListener(v -> {
+            boolean passwordVisible = (password_input.getTransformationMethod() == null);
+
+            if (passwordVisible) {
+                // Sembunyikan password
+                password_input.setTransformationMethod(PasswordTransformationMethod.getInstance());
+            } else {
+                // Tampilkan password
+                password_input.setTransformationMethod(null);
+            }
+
+            // Pindahkan kursor ke akhir teks agar tetap terlihat saat perubahan
+            password_input.setSelection(password_input.getText().length());
+        });
 
 
     }
