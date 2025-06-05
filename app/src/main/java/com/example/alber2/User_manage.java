@@ -1,8 +1,11 @@
 package com.example.alber2;
 
 public class User_manage {
-    private String nama,email,namaPerusahaan;
-    private int tlp;
+    private String nama, email, namaPerusahaan;
+
+    private User_manage(){
+
+    }
 
     public String getNama() {
         return nama;
@@ -28,19 +31,11 @@ public class User_manage {
         this.namaPerusahaan = namaPerusahaan;
     }
 
-    public int getTlp() {
-        return tlp;
+    public User_manage(String nama, String email, String namaPerusahaan) {
+        this.nama = nama;
+        this.email = email;
+        this.namaPerusahaan = namaPerusahaan;
     }
 
-    public void setTlp(int tlp) {
-        this.tlp = tlp;
-    }
-
-    public User_manage(){
-        this.nama=nama;
-        this.email=email;
-        this.namaPerusahaan=namaPerusahaan;
-        this.tlp=tlp;
-    }
 
 }

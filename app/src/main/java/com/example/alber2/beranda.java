@@ -61,7 +61,7 @@ public class beranda extends AppCompatActivity {
         btnroller.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
+
                 dtexca();
                 finish();
             }

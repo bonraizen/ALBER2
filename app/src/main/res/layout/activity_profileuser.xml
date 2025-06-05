@@ -25,6 +25,7 @@
         android:id="@+id/name_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_marginTop="16dp"
         android:text="name"
         android:textSize="24sp"
@@ -51,14 +52,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nama        :"
+                android:text="Nama           :"
                 android:textSize="18sp"
-                android:minEms="8" /> <TextView
-            android:id="@+id/Nama"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="."
-            android:textSize="18sp" />
+                android:textColor="@color/black"
+                android:minEms="5" />
+                <TextView
+                android:id="@+id/Nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="."
+                android:textSize="18sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -70,14 +74,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="Perusahaan :"
                 android:textSize="18sp"
-                android:minEms="8" />
+                android:minEms="5" />
 
             <TextView
                 android:id="@+id/korporat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="."
                 android:textSize="18sp" />
         </LinearLayout>
@@ -91,14 +97,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email        : "
+                android:textColor="@color/black"
+                android:text="Email            : "
                 android:textSize="18sp"
-                android:minEms="8" />
+                android:minEms="5" />
 
             <TextView
                 android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="."
                 android:textSize="18sp" />
         </LinearLayout>
@@ -112,14 +120,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No Tlp       : "
+                android:textColor="@color/black"
+                android:text="No Tlp          : "
                 android:textSize="18sp"
-                android:minEms="8" />
+                android:minEms="5" />
 
             <TextView
                 android:id="@+id/notlp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="."
                 android:textSize="18sp" />
         </LinearLayout>
@@ -129,6 +139,7 @@
         android:id="@+id/history_order_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:layout_marginTop="24dp"
         android:text="HISTORY ORDER"
         android:textSize="18sp"
@@ -141,7 +152,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/back_button"
+        app:layout_constraintBottom_toTopOf="@+id/btn_logout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/history_order_label">
@@ -156,12 +167,14 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:padding="8dp"
+                    android:textColor="@color/black"
                     android:text="No"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="2"
+                    android:textColor="@color/black"
                     android:padding="8dp"
                     android:text="Jenis ALBER"
                     android:textStyle="bold" />
@@ -169,6 +182,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="2"
+                    android:textColor="@color/black"
                     android:padding="8dp"
                     android:text="Tanggal Pengajuan"
                     android:textStyle="bold" />
@@ -178,35 +192,33 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/back_button"
+        android:id="@+id/btn_logout"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/orange"
-        android:text="BACK"
+        android:text="LOGOUT"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/updateprofpeng"
         app:layout_constraintHorizontal_chainStyle="spread" />
 
     <Button
-        android:id="@+id/updateprofpeng"
+        android:id="@+id/btn_updateprofpeng"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="UBAH"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintStart_toEndOf="@+id/btn_logout"
         app:layout_constraintEnd_toStartOf="@+id/btDelakun"
         app:layout_constraintHorizontal_chainStyle="spread" />
 
     <Button
-        android:id="@+id/btDelakun"
+        android:id="@+id/btn_Delakun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#FF0000"
         android:text="DELETE AKUN"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/updateprofpeng"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="spread" />
 
