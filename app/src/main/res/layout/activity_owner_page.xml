@@ -41,47 +41,47 @@
 
         <EditText
             android:id="@+id/companyName"
-            android:layout_width="match_parent"
+            android:layout_width="376dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/profileImage"
             android:layout_marginTop="16dp"
             android:background="@android:color/white"
             android:hint="NAMA PERUSAHAAN"
             android:padding="12dp"
-            android:textColor="@android:color/black"/>
+            android:textColor="@android:color/black" />
 
         <EditText
             android:id="@+id/phoneNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="380dp"
+            android:layout_height="38dp"
             android:layout_below="@id/companyName"
             android:layout_marginTop="16dp"
             android:background="@android:color/white"
             android:hint="NOMOR TELEPON"
             android:padding="12dp"
-            android:textColor="@android:color/black"/>
+            android:textColor="@android:color/black" />
 
         <EditText
             android:id="@+id/accountNumber"
-            android:layout_width="match_parent"
+            android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/phoneNumber"
             android:layout_marginTop="16dp"
             android:background="@android:color/white"
             android:hint="NOMOR REKENING"
             android:padding="12dp"
-            android:textColor="@android:color/black"/>
+            android:textColor="@android:color/black" />
 
         <EditText
             android:id="@+id/address"
-            android:layout_width="match_parent"
+            android:layout_width="381dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/accountNumber"
             android:layout_marginTop="16dp"
             android:background="@android:color/white"
             android:hint="ALAMAT"
             android:padding="12dp"
-            android:textColor="@android:color/black"/>
+            android:textColor="@android:color/black" />
 
         <Button
             android:id="@+id/backButton"
