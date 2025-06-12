@@ -85,236 +85,252 @@
             app:cardCornerRadius="40dp"
             app:cardBackgroundColor="@color/tranparent">
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:rowCount="3"
-            android:padding="16dp">
+             <GridLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:columnCount="2"
+                 android:padding="16dp"
+                 android:rowCount="3">
 
-            <!-- Category Item 1 -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+                 <!-- Category Item 1 -->
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_columnWeight="1"
+                     android:layout_marginTop="8dp"
+                     android:gravity="center"
+                     android:orientation="vertical">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center">
-                <ImageButton
-                    android:id="@+id/btnexca"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="@color/tranparent"
-                    android:contentDescription="bucket_excavator"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/exca5tn_cat"
-                    android:visibility="visible" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bucket Excavator" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
+                     <androidx.cardview.widget.CardView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         app:cardCornerRadius="30dp">
 
-            <!-- Category Item 2 -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:layout_marginLeft="8dp"
-                android:gravity="center">
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:gravity="center"
+                             android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="30dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-                <ImageButton
-                    android:id="@+id/btnroller"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="@color/tranparent"
-                    android:contentDescription="bucket_excavator"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/vibrol"
-                    android:visibility="visible" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Vibro Roller"
-                    android:layout_marginTop="0dp"/>
-            </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            </LinearLayout>
+                             <ImageButton
+                                 android:id="@+id/btnexca"
+                                 android:layout_width="166dp"
+                                 android:layout_height="107dp"
+                                 android:adjustViewBounds="true"
+                                 android:backgroundTint="@color/tranparent"
+                                 android:contentDescription="bucket_excavator"
+                                 android:scaleType="fitCenter"
+                                 android:src="@drawable/exca5tn_cat"
+                                 android:visibility="visible" />
 
-            <!-- Category Item 3 -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="Bucket Excavator" />
+                         </LinearLayout>
+                     </androidx.cardview.widget.CardView>
+                 </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                app:cardCornerRadius="30dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
+                 <!-- Category Item 2 -->
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_columnWeight="1"
+                     android:layout_marginLeft="8dp"
+                     android:gravity="center"
+                     android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/btndozer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="@color/tranparent"
-                    android:contentDescription="bucket_excavator"
-                    android:cropToPadding="true"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/doser"
-                    android:visibility="visible" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Dozer" />
-            </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            </LinearLayout>
+                     <androidx.cardview.widget.CardView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         app:cardCornerRadius="30dp">
 
-            <!-- Category Item 4 -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:gravity="center"
+                             android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="30dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-                <ImageButton
-                    android:id="@+id/btnbreakerexca"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="@color/tranparent"
-                    android:contentDescription="bucket_excavator"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/dtexca_klbco_5tn"
-                    android:visibility="visible" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Breaker Excavator"
-                    />
-            </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            </LinearLayout>
+                             <ImageButton
+                                 android:id="@+id/btnroller"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:adjustViewBounds="true"
+                                 android:backgroundTint="@color/tranparent"
+                                 android:contentDescription="bucket_excavator"
+                                 android:scaleType="fitCenter"
+                                 android:src="@drawable/vibrol"
+                                 android:visibility="visible" />
 
-            <!-- Category Item 5 -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_marginTop="0dp"
+                                 android:text="Vibro Roller" />
+                         </LinearLayout>
+                     </androidx.cardview.widget.CardView>
+                 </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="30dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-                <ImageButton
-                    android:id="@+id/btnforklift"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="@color/tranparent"
-                    android:contentDescription="bucket_excavator"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/forklif_b1"
-                    android:visibility="visible" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Forklift" />
-            </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            </LinearLayout>
+                 <!-- Category Item 3 -->
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_columnWeight="1"
+                     android:gravity="center"
+                     android:orientation="vertical">
 
-            <!-- Category Item 6 -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:gravity="center">
+                     <androidx.cardview.widget.CardView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="8dp"
+                         app:cardCornerRadius="30dp">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="30dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-                <ImageButton
-                    android:id="@+id/btnlift"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="@color/tranparent"
-                    android:contentDescription="bucket_excavator"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/lift_b1"
-                    android:visibility="visible" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Scissor Lift" />
-            </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            </LinearLayout>
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:gravity="center"
+                             android:orientation="vertical">
 
-        </GridLayout>
-        </androidx.cardview.widget.CardView>
+                             <ImageButton
+                                 android:id="@+id/btndozer"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:adjustViewBounds="true"
+                                 android:backgroundTint="@color/tranparent"
+                                 android:contentDescription="bucket_excavator"
+                                 android:cropToPadding="true"
+                                 android:scaleType="fitCenter"
+                                 android:src="@drawable/doser"
+                                 android:visibility="visible" />
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="Dozer" />
+                         </LinearLayout>
+                     </androidx.cardview.widget.CardView>
+                 </LinearLayout>
+
+                 <!-- Category Item 4 -->
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_columnWeight="1"
+                     android:layout_marginLeft="8dp"
+                     android:layout_marginTop="8dp"
+                     android:gravity="center"
+                     android:orientation="vertical">
+
+                     <androidx.cardview.widget.CardView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         app:cardCornerRadius="30dp">
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:gravity="center"
+                             android:orientation="vertical">
+
+                             <ImageButton
+                                 android:id="@+id/btnbreakerexca"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:adjustViewBounds="true"
+                                 android:backgroundTint="@color/tranparent"
+                                 android:contentDescription="bucket_excavator"
+                                 android:scaleType="fitCenter"
+                                 android:src="@drawable/dtexca_klbco_5tn"
+                                 android:visibility="visible" />
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="Breaker Excavator" />
+                         </LinearLayout>
+                     </androidx.cardview.widget.CardView>
+                 </LinearLayout>
+
+                 <!-- Category Item 5 -->
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_columnWeight="1"
+                     android:layout_marginTop="8dp"
+                     android:gravity="center"
+                     android:orientation="vertical">
+
+                     <androidx.cardview.widget.CardView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         app:cardCornerRadius="30dp">
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:gravity="center"
+                             android:orientation="vertical">
+
+                             <ImageButton
+                                 android:id="@+id/btnforklift"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:adjustViewBounds="true"
+                                 android:backgroundTint="@color/tranparent"
+                                 android:contentDescription="bucket_excavator"
+                                 android:scaleType="fitCenter"
+                                 android:src="@drawable/forklif_b1"
+                                 android:visibility="visible" />
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="Forklift" />
+                         </LinearLayout>
+                     </androidx.cardview.widget.CardView>
+                 </LinearLayout>
+
+                 <!-- Category Item 6 -->
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_columnWeight="1"
+                     android:layout_marginLeft="8dp"
+                     android:layout_marginTop="8dp"
+                     android:gravity="center"
+                     android:orientation="vertical">
+
+                     <androidx.cardview.widget.CardView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         app:cardCornerRadius="30dp">
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:gravity="center"
+                             android:orientation="vertical">
+
+                             <ImageButton
+                                 android:id="@+id/btnlift"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:adjustViewBounds="true"
+                                 android:backgroundTint="@color/tranparent"
+                                 android:contentDescription="bucket_excavator"
+                                 android:scaleType="fitCenter"
+                                 android:src="@drawable/lift_b1"
+                                 android:visibility="visible" />
+
+                             <TextView
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="Scissor Lift" />
+                         </LinearLayout>
+                     </androidx.cardview.widget.CardView>
+                 </LinearLayout>
+
+             </GridLayout>
+         </androidx.cardview.widget.CardView>
     </LinearLayout>
 </ScrollView>
