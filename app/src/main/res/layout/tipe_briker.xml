@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FAEBD7">
+
+    <!-- Title -->
+
+    <!-- CardView 1 -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="272dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="4dp"
+        android:text="BREAKER
+         EXCAVATOR"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView 2 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_1"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView 3 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_2"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="365dp"
+        android:background="@drawable/form_background"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="-13dp"
+        tools:layout_editor_absoluteY="521dp">
+
+        <ImageView
+            android:id="@+id/image_view_2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/Kubota_Excavator_Breaker"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="5-ton Kubota Excavator + Breaker"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Harga Sewa per jam:
+                  Rp 170.000"
+            android:textSize="14sp"
+
+        <TextView
+            android:layout_width="188dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="4dp"
+            android:text="Minimum sewa: 50 jam"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="188dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="-11dp"
+            android:text="Harian operator: Rp 250.000"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Detail" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="365dp"
+        android:background="@drawable/form_background"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="-10dp"
+        tools:layout_editor_absoluteY="140dp">
+
+        <ImageView
+            android:id="@+id/image_view_1"
+            android:layout_width="213dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/breaker_komatsu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="7.5-ton Komatsu Excavator + Breaker"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="188dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="4dp"
+            android:text="Harga Sewa per jam:
+            Rp 170.000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="188dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="4dp"
+            android:text="Minimum sewa: 50 jam"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="188dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="-11dp"
+            android:text="Harian operator: Rp 250.000"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginTop="50mm"
+            android:text="Detail"
+
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Breaker adalah attachment tambahan yang membuat excavator menjadi lebih mampu lagi. "
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="72dp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
