@@ -14,48 +14,77 @@
         android:padding="20dp">
 
         <!-- Judul -->
+
+        <!-- Container form -->
+
+
+
+
         <TextView
             android:id="@+id/tvjudul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="GET STARTED NOW!"
+            android:layout_marginTop="50dp"
             android:fontFamily="@font/orelega_one"
+            android:text="GET!"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop=""
+            android:text="STARTED NOW"
+            android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="#000000"
-            android:layout_marginTop="50dp" />
+            android:fontFamily="@font/orelega_one"
+            />
 
-        <!-- Container form -->
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/form_background"
             android:orientation="vertical"
             android:padding="20dp"
-            android:layout_marginBottom="32dp">
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="100dp"
+            >
 
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop=""
+                android:text="Sig up"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                />
             <!-- Nama -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"/>
 
+            <!-- Nama Perusahaan -->
             <EditText
                 android:id="@+id/etNama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:hint="ketik disini"
+                android:layout_marginTop="20dp"
                 android:backgroundTint="#000000"
+                android:hint="ketik disini"
                 android:inputType="text"
                 android:minHeight="48dp"
-                android:layout_marginTop="4dp"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:textColor="@color/black" />
 
-            <!-- Nama Perusahaan -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
