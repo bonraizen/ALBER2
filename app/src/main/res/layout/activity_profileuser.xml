@@ -184,8 +184,16 @@
                     android:layout_weight="2"
                     android:textColor="@color/black"
                     android:padding="8dp"
-                    android:text="Tanggal Pengajuan"
+                    android:text="Tanggal Sewa"
                     android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:text="Status"/>
             </TableRow>
 
         </TableLayout>
@@ -209,7 +217,7 @@
         android:text="UBAH"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_logout"
-        app:layout_constraintEnd_toStartOf="@+id/btDelakun"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Delakun"
         app:layout_constraintHorizontal_chainStyle="spread" />
 
     <Button

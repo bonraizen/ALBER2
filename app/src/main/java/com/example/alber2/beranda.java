@@ -12,12 +12,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import com.google.firebase.auth.FirebaseAuth;
 
 public class beranda extends AppCompatActivity {
 
     ImageButton btnexca,btnroller,btndozer,btnbreakerexca,btnforklift,btnlift,btnprofiluser;
 
+    private AdView mAdView;
 
     public void sumber (){
         btnexca = findViewById(R.id.btnexca);
@@ -27,6 +31,7 @@ public class beranda extends AppCompatActivity {
         btnforklift = findViewById(R.id.btnforklift);
         btnlift = findViewById(R.id.btnlift);
         btnprofiluser = findViewById(R.id.btnprofiluser);
+        mAdView = findViewById(R.id.adView);
     }
 
     public void exca  () {
@@ -48,8 +53,10 @@ public class beranda extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_beranda);
-
         sumber();
+
+           AdRequest adRequest = new AdRequest.Builder().build();
+           mAdView.loadAd(adRequest);
 
         btnexca.setOnClickListener(new View.OnClickListener() {
             @Override

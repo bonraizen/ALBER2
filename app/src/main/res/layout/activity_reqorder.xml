@@ -17,9 +17,10 @@
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pengajuan"
+            android:gravity="center_horizontal"
+            android:text="PENGAJUAN"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@color/black"
@@ -35,12 +36,13 @@
             android:textColor="@color/black"
             android:layout_marginBottom="16dp" />
         <EditText
-            android:id="@+id/nama_lengkap"
+            android:id="@+id/etnama_lengkap"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:hint="Nama Lengkap"
             android:minHeight="48dp"
+            android:textColorHint="@color/black"
             android:textColor="@color/black"/>
         <TextView
 
@@ -54,12 +56,13 @@
 
 
         <EditText
-            android:id="@+id/nama_perusahaan"
+            android:id="@+id/etnama_perusahaan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:hint="Nama Perusahaan"
             android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:minHeight="48dp" />
 
         <TextView
@@ -73,12 +76,13 @@
             android:layout_marginBottom="16dp" />
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/etemail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:hint="Email"
             android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:minHeight="48dp" />
 
         <TextView
@@ -92,13 +96,14 @@
             android:layout_marginBottom="16dp" />
 
         <EditText
-            android:id="@+id/nomor_telpon"
+            android:id="@+id/etnomor_telpon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:hint="Nomor Telp"
             android:minHeight="48dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"/>
 
         <TextView
 
@@ -120,13 +125,14 @@
             android:textColor="@color/black"
             android:layout_marginBottom="16dp" />
         <Spinner
-            android:id="@+id/alat_yang_diperlukan"
+            android:id="@+id/spinalat_diperlukan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:entries="@array/jk_alber"
             android:minHeight="48dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"/>
         <TextView
 
             android:layout_width="wrap_content"
@@ -145,7 +151,8 @@
             android:layout_marginBottom="8dp"
             android:gravity="top|start"
             android:inputType="textMultiLine"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"/>
 
         <TextView
 
@@ -157,31 +164,33 @@
             android:textColor="@color/black"
             android:layout_marginBottom="16dp" />
         <EditText
-            android:id="@+id/tanggal_mulai_sewa"
+            android:id="@+id/ettanggal_sewa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:hint="Tanggal Mulai Sewa"
             android:minHeight="48dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"/>
 
         <TextView
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="lama sewa"
+            android:text="lama sewa dalam hari"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_marginBottom="16dp" />
         <EditText
-            android:id="@+id/lama_sewa"
+            android:id="@+id/etlama_sewa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:hint="Lama Sewa"
+            android:hint="/ HARI"
             android:minHeight="48dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"/>
 
         <TextView
             
@@ -193,13 +202,14 @@
             android:textColor="@color/black"
             android:layout_marginBottom="16dp" />
         <EditText
-            android:id="@+id/lokasi_proyek"
+            android:id="@+id/etlokasi_proyek"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:hint="Lokasi Proyek"
             android:minHeight="48dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"/>
 
         <Button
             android:id="@+id/btn_kirim"

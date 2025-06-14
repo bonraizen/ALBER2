@@ -2,21 +2,27 @@ package com.example.alber2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -51,7 +57,6 @@ public class SignUp extends AppCompatActivity {
         etcreatePassword = findViewById(R.id.etPassword);
         etconfirmPassword = findViewById(R.id.etConfirmPassword);
     }
-
 
 
     @Override
@@ -144,41 +149,89 @@ public class SignUp extends AppCompatActivity {
                     Toast.makeText(SignUp.this, "Nama, Nomor Telepon, dan NIK KTP tidak boleh kosong", Toast.LENGTH_SHORT).show();
                     return; // Hentikan proses jika ada field yang kosong
                 }
-                // Perbarui data di Realtime Database
-                String userEmailKey = currentUser.getEmail().replace(".", "_");
-                DatabaseReference userRef = database.child("user").child(userEmailKey);
 
-                // Perbarui setiap field secara individual
-                userRef.child("nama").setValue(nama);
-                userRef.child("namaPerusahaan").setValue(namaPerusahaan);
-                userRef.child("nomorTelepon").setValue(nomorTelepon);
-                userRef.child("nikKTP").setValue(nikKTP)
-                        .addOnCompleteListener(task -> {
-                            if (task.isSuccessful()) {
-                                // Jika kata sandi baru diberikan, perbarui kata sandi di Firebase Authentication
-                                if (!newPassword.isEmpty() && !confirmNewPassword.isEmpty()) {
-                                    if (newPassword.equals(confirmNewPassword)) {
-                                        currentUser.updatePassword(newPassword)
-                                                .addOnCompleteListener(passwordTask -> {
-                                                    if (passwordTask.isSuccessful()) {
-                                                        userRef.child("password").setValue(newPassword); // Perbarui kata sandi di Realtime DB
-                                                        Toast.makeText(SignUp.this, "Profil dan kata sandi berhasil diperbarui.", Toast.LENGTH_LONG).show();
-                                                    } else {
-                                                        Toast.makeText(SignUp.this, "Gagal memperbarui kata sandi: " + passwordTask.getException().getMessage(), Toast.LENGTH_LONG).show();
-                                                        Log.e("SignUpActivity", "Pembaruan kata sandi gagal", passwordTask.getException());
-                                                    }
-                                                });
-                                    } else {
-                                        Toast.makeText(SignUp.this, "Konfirmasi kata sandi baru tidak sesuai", Toast.LENGTH_SHORT).show();
+                if (!newPassword.isEmpty() || !confirmNewPassword.isEmpty()) {
+                    if (!newPassword.equals(confirmNewPassword)) {
+                        Toast.makeText(SignUp.this, "Konfirmasi kata sandi baru tidak sesuai", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    if (newPassword.length() < 6) { // Firebase password minimum length
+                        Toast.makeText(SignUp.this, "Kata sandi baru minimal 6 karakter", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                }
+
+                // --- Start Reauthentication Process ---
+                AlertDialog.Builder builder = new AlertDialog.Builder(SignUp.this);
+                builder.setTitle("Verifikasi Identitas");
+                builder.setMessage("Untuk memperbarui profil Anda, harap masukkan kata sandi Anda saat ini.");
+
+                final EditText input = new EditText(SignUp.this);
+                input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                input.setTransformationMethod(PasswordTransformationMethod.getInstance()); // Ensure password dots
+                LinearLayout layout = new LinearLayout(SignUp.this);
+                layout.setOrientation(LinearLayout.VERTICAL);
+                layout.setPadding(50, 20, 50, 0); // Add padding
+                layout.addView(input);
+                builder.setView(layout);
+
+                builder.setPositiveButton("OK", (dialog, which) -> {
+                    String currentPassword = input.getText().toString();
+                    if (currentPassword.isEmpty()) {
+                        Toast.makeText(SignUp.this, "Kata sandi saat ini tidak boleh kosong", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+
+                        // Reauthenticate user
+                        AuthCredential credential = EmailAuthProvider.getCredential(currentUser.getEmail(), currentPassword);
+                        currentUser.reauthenticate(credential)
+                                .addOnCompleteListener(reauthTask -> {
+                                    if (reauthTask.isSuccessful()) {
+                                        Log.d("SignUpActivity", "Reauthentication successful.");
                                     }
-                                } else {
-                                    Toast.makeText(SignUp.this, "Profil berhasil diperbarui.", Toast.LENGTH_SHORT).show();
-                                }
-                            } else {
-                                Toast.makeText(SignUp.this, "Gagal memperbarui profil: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                                Log.e("SignUpActivity", "Pembaruan profil gagal", task.getException());
-                            }
-                        });
+                                    String userEmailKey = currentUser.getEmail().replace(".", "_");
+                                    DatabaseReference userRef = database.child("user").child(userEmailKey);
+
+                                    // Perbarui setiap field secara individual
+                                    userRef.child("nama").setValue(nama);
+                                    userRef.child("namaPerusahaan").setValue(namaPerusahaan);
+                                    userRef.child("nomorTelepon").setValue(nomorTelepon);
+                                    userRef.child("nikKTP").setValue(nikKTP)
+                                            .addOnCompleteListener(task -> {
+                                                if (task.isSuccessful()) {
+                                                    // Jika kata sandi baru diberikan, perbarui kata sandi di Firebase Authentication
+                                                    if (!newPassword.isEmpty() && !confirmNewPassword.isEmpty()) {
+                                                        if (newPassword.equals(confirmNewPassword)) {
+                                                            currentUser.updatePassword(newPassword)
+                                                                    .addOnCompleteListener(passwordTask -> {
+                                                                        if (passwordTask.isSuccessful()) {
+                                                                            userRef.child("password").setValue(newPassword); // Perbarui kata sandi di Realtime DB
+                                                                            Intent intent = new Intent(SignUp.this, profileuser.class);
+                                                                            startActivity(intent);
+                                                                            Toast.makeText(SignUp.this, "Profil dan kata sandi berhasil diperbarui.", Toast.LENGTH_LONG).show();
+                                                                            finish();
+                                                                        } else {
+                                                                            Toast.makeText(SignUp.this, "Gagal memperbarui kata sandi: " + passwordTask.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                                                            Log.e("SignUpActivity", "Pembaruan kata sandi gagal", passwordTask.getException());
+                                                                        }
+                                                                    });
+                                                        } else {
+                                                            Toast.makeText(SignUp.this, "Konfirmasi kata sandi baru tidak sesuai", Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    } else {
+                                                        Toast.makeText(SignUp.this, "Profil berhasil diperbarui.", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                } else {
+                                                    Toast.makeText(SignUp.this, "Gagal memperbarui profil: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                                    Log.e("SignUpActivity", "Pembaruan profil gagal", task.getException());
+                                                }
+                                            });
+                                });
+                });
+                builder.setNegativeButton("Batal", (dialog, which) -> dialog.cancel());
+                builder.show();
+
             }else {
                 String nama = etnama.getText().toString();
                 String namaPerusahaan = etnamaPerusahaan.getText().toString();
