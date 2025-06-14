@@ -108,14 +108,14 @@
         <TextView
             android:layout_width="188dp"
             android:layout_height="36dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="-11dp"
             android:text="Harian operator: Rp 250.000"
             android:textSize="14sp" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="1dp"
             android:text="Detail" />
     </LinearLayout>
 
@@ -161,7 +161,7 @@
         <TextView
             android:layout_width="188dp"
             android:layout_height="36dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="-11dp"
             android:text="Harian operator: Rp 250.000"
             android:textSize="14sp" />
 
@@ -214,7 +214,7 @@
         <TextView
             android:layout_width="188dp"
             android:layout_height="36dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="-11dp"
             android:text="Harian operator: Rp 250.000"
             android:textSize="14sp" />
 
@@ -234,6 +234,8 @@
         android:layout_height="wrap_content"
         android:text="Menggali, memindahkan, dan meratakan tanah. Excavator juga dapat digunakan untuk mengeruk sungai, menancapkan pondasi, dan memecahkan batu. "
         tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="72dp" />
+        tools:layout_editor_absoluteY="72dp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
