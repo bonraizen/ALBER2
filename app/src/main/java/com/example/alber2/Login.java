@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +28,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Login extends AppCompatActivity {
 
     private DatabaseReference database;
-    Button pindah,btnlupaPassword ;
+    Button btnlupaPassword,btnsignup;
+    ImageButton btnback;
 
     private TextView txtshow;
 
@@ -37,24 +39,13 @@ public class Login extends AppCompatActivity {
 
 
     private void masukan() {
-        pindah = findViewById(R.id.btnsignup);
+        btnsignup = findViewById(R.id.btnsignup);
         btnlupaPassword = findViewById(R.id.btnlupaPassword);
+        btnback = findViewById(R.id.btnback);
         signin = findViewById(R.id.sign_in_button);
         email_input = findViewById(R.id.email_input);
         password_input = findViewById(R.id.password_input);
         txtshow = findViewById(R.id.txtshow);
-    }
-
-    private void move (){
-        pindah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent pindahsignup = new Intent(Login.this, SignUp.class);
-                startActivity(pindahsignup);
-                finish();
-            }
-        });
-
     }
 
     @Override
@@ -69,16 +60,32 @@ public class Login extends AppCompatActivity {
         database = FirebaseDatabase.getInstance().getReference("user");
 
 
+        btnsignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pindahsignup = new Intent(Login.this, SignUp.class);
+                startActivity(pindahsignup);
+                finish();
+            }
+        });
 
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pindahsignup = new Intent(Login.this, MainActivity.class);
+                startActivity(pindahsignup);
+                finish();
+            }
+        });
 
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 login();
             }
         });
     }
+
 
     private void login() {
         email = email_input.getText().toString().trim();

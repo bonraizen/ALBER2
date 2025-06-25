@@ -22,7 +22,6 @@ public class beranda extends AppCompatActivity {
     ImageButton btnexca,btnroller,btndozer,btnbreakerexca,btnforklift,btnlift,btnprofiluser;
 
     private AdView mAdView;
-
     public void sumber (){
         btnexca = findViewById(R.id.btnexca);
         btnroller = findViewById(R.id.btnroller);
@@ -34,42 +33,21 @@ public class beranda extends AppCompatActivity {
         mAdView = findViewById(R.id.adView);
     }
 
-    public void exca  () {
-        Intent pindahexca = new Intent(beranda.this,bucketexca.class);
-        startActivity(pindahexca);
-    };
-
-    public void dtexca(){
-        Intent dt = new Intent( beranda.this,MainActivity.class);
-        startActivity(dt);
-    }
-
-    public void profuser(){
-        Intent usr = new Intent( beranda.this,profileuser.class);
-        startActivity(usr);
-    }
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_beranda);
-        sumber();
-
-           AdRequest adRequest = new AdRequest.Builder().build();
-           mAdView.loadAd(adRequest);
-
+    public void move() {
         btnexca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                exca();
+                Intent eca = new Intent(beranda.this,bucketexca.class);
+                startActivity(eca);
+                finish();
             }
         });
 
         btnroller.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                dtexca();
+                Intent roller = new Intent(beranda.this, com.example.alber2.roller.class);
+                startActivity(roller);
                 finish();
             }
         });
@@ -77,12 +55,37 @@ public class beranda extends AppCompatActivity {
         btnprofiluser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                profuser();
+                Intent usr = new Intent( beranda.this,profileuser.class);
+                startActivity(usr);
+                finish();
             }
         });
 
+        btnbreakerexca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent breaker = new Intent( beranda.this,profileuser.class);
+                startActivity(breaker);
+                finish();
+            }
+        });
+
+    };
 
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_beranda);
+
+        //Masukan reference tombol
+            sumber();
+            //Masukan event click
+        move();
+
+           AdRequest adRequest = new AdRequest.Builder().build();
+           mAdView.loadAd(adRequest);
 
     }
 }
