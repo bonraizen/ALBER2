@@ -18,13 +18,15 @@
 
         <ImageButton
             android:id="@+id/btnback"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/btn_backuser"
-            android:contentDescription="Back"
+            android:layout_width="48dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="30dp"
             android:layout_marginBottom="10dp"
-            tools:ignore="HardcodedText" />
+            android:contentDescription="Back"
+            android:src="@drawable/iconarrow"
+            android:rotation="180"
+            android:background="#FDE5A3"
+            tools:ignore="HardcodedText"/>
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"

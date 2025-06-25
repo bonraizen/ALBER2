@@ -42,7 +42,7 @@
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mini Excavator, 5 Ton, Kobelco"
+                android:text="7.5-ton Komatsu Excavator + Breaker"
                 android:textSize="24sp"
                 android:textColor="#000000"
                 android:layout_gravity="center"
@@ -52,7 +52,7 @@
                 android:id="@+id/DetExca5tnKlbe"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:src="@drawable/exsakobelko"
+                android:src="@drawable/Komatsu_Excavator_Breaker"
                 android:contentDescription="Mini Excavator"
                 android:layout_marginTop="16dp"
                 tools:ignore="HardcodedText" />
@@ -136,6 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
+
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -155,7 +156,7 @@
                         android:layout_width="283dp"
                         android:layout_height="match_parent"
                         android:background="#D9D9D9"
-                        android:text="4720"
+                        android:text="5040"
                         android:textAlignment="center" />
                 </TableRow>
 
@@ -171,7 +172,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:text="0.14" />
+                        android:text="0.10" />
                 </TableRow>
 
                 <TableRow>
@@ -188,7 +189,7 @@
                         android:layout_height="wrap_content"
                         android:background="#D9D9D9"
                         android:textAlignment="center"
-                        android:text="3.620" />
+                        android:text="3.800" />
                 </TableRow>
 
                 <TableRow>
@@ -203,7 +204,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:text="2.53" />
+                        android:text="2.63" />
                 </TableRow>
 
                 <TableRow>
@@ -220,7 +221,7 @@
                         android:layout_height="wrap_content"
                         android:background="#D9D9D9"
                         android:textAlignment="center"
-                        android:text="5.46" />
+                        android:text="5.55" />
                 </TableRow>
 
                 <TableRow>
@@ -235,7 +236,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:text="1.96" />
+                        android:text="1.94" />
                 </TableRow>
 
             </TableLayout>
@@ -260,6 +261,7 @@
                         android:textSize="20sp"
                         android:inputType="text"
                         android:minHeight="48dp"></EditText>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

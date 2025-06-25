@@ -251,7 +251,7 @@
                                  android:backgroundTint="@color/tranparent"
                                  android:contentDescription="bucket_excavator"
                                  android:scaleType="fitCenter"
-                                 android:src="@drawable/dtexca_klbco_5tn"
+                                 android:src="@drawable/exca5tn_klbco"
                                  android:visibility="visible" />
 
                              <TextView
