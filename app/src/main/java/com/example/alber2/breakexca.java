@@ -37,7 +37,9 @@ public class breakexca extends AppCompatActivity {
         btnexkmts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent kometsu = new Intent(breakexca.this,)
+                Intent kometsu = new Intent(breakexca.this, excabrk_komatsu.class);
+                startActivity(kometsu);
+                finish();
             }
         });
     }

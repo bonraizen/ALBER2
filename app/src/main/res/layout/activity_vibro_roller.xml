@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context=""
+    tools:context=".vibro_roller"
     android:background="#FDE5A3">
 
 

@@ -57,6 +57,11 @@
         <activity
             android:name=".SignUp"
             android:exported="false" />
+
+        <activity
+            android:name=".doser_komatsud21"
+            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
