@@ -8,56 +8,48 @@ import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-public class forklift extends AppCompatActivity {
+public class doser_komatsu extends AppCompatActivity {
+
+    Button btnreqorder;
 
     ImageButton btnback;
-    Button btnexkobel;
 
     private void sumber(){
+        btnreqorder = findViewById(R.id.btnreqorder);
         btnback = findViewById(R.id.btnback);
-        btnexkobel = findViewById(R.id.btnexkobel);
     }
 
     private void move(){
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent back = new Intent(forklift.this, beranda.class);
+                Intent back = new Intent(doser_komatsu.this,dozer.class);
                 startActivity(back);
                 finish();
             }
         });
 
-        btnexkobel.setOnClickListener(new View.OnClickListener() {
+        btnreqorder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent order = new Intent(forklift.this,Reqorder.class);
+                Intent  order = new Intent(doser_komatsu.this,Reqorder.class);
                 startActivity(order);
                 finish();
             }
         });
-    }
 
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_forklift);
+        setContentView(R.layout.activity_doser_komatsu);
 
-        //referensi
         sumber();
-        //eventclick listener
+
         move();
 
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
     }
 }

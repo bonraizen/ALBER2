@@ -12,30 +12,30 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class forklift extends AppCompatActivity {
+public class forklift_dosan extends AppCompatActivity {
 
     ImageButton btnback;
-    Button btnexkobel;
+    Button btnreqorder;
 
     private void sumber(){
         btnback = findViewById(R.id.btnback);
-        btnexkobel = findViewById(R.id.btnexkobel);
+        btnreqorder = findViewById(R.id.btnreqorder);
     }
 
     private void move(){
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent back = new Intent(forklift.this, beranda.class);
+                Intent back = new Intent(forklift_dosan.this, beranda.class);
                 startActivity(back);
                 finish();
             }
         });
 
-        btnexkobel.setOnClickListener(new View.OnClickListener() {
+        btnreqorder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent order = new Intent(forklift.this,Reqorder.class);
+                Intent order = new Intent(forklift_dosan.this,Reqorder.class);
                 startActivity(order);
                 finish();
             }
@@ -46,13 +46,13 @@ public class forklift extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_forklift);
+        setContentView(R.layout.activity_forklift_dosan);
 
-        //referensi
+        //Reference
         sumber();
-        //eventclick listener
-        move();
 
+        //cliclistener
+        move();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

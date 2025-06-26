@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context=""
     android:background="#FDE5A3">
 
 
@@ -32,11 +31,11 @@
                 android:layout_height="47dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="10dp"
-                android:contentDescription="Back"
-                android:src="@drawable/iconarrow"
-                android:rotation="180"
                 android:background="#FDE5A3"
-                tools:ignore="HardcodedText" />
+                android:contentDescription="Back"
+                android:rotation="180"
+                android:src="@drawable/iconarrow"
+                tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/title"

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
@@ -11,31 +12,30 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+public class vibro_roller extends AppCompatActivity{
 
-public class forklift extends AppCompatActivity {
-
+    Button btnreqorder;
     ImageButton btnback;
-    Button btnexkobel;
 
     private void sumber(){
+        btnreqorder = findViewById(R.id.btnreqorder);
         btnback = findViewById(R.id.btnback);
-        btnexkobel = findViewById(R.id.btnexkobel);
     }
 
     private void move(){
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent back = new Intent(forklift.this, beranda.class);
+                Intent back = new Intent(vibro_roller.this,roller.class);
                 startActivity(back);
                 finish();
             }
         });
 
-        btnexkobel.setOnClickListener(new View.OnClickListener() {
+        btnreqorder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent order = new Intent(forklift.this,Reqorder.class);
+                Intent order = new Intent(vibro_roller.this,Reqorder.class);
                 startActivity(order);
                 finish();
             }
@@ -46,18 +46,10 @@ public class forklift extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_forklift);
+        setContentView(R.layout.activity_vibro_roller);
 
-        //referensi
+
         sumber();
-        //eventclick listener
         move();
-
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
     }
 }

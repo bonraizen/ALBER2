@@ -12,46 +12,46 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class forklift extends AppCompatActivity {
+public class doser_komatsud21 extends AppCompatActivity {
 
     ImageButton btnback;
-    Button btnexkobel;
+
+    Button btnreqorder;
 
     private void sumber(){
         btnback = findViewById(R.id.btnback);
-        btnexkobel = findViewById(R.id.btnexkobel);
+        btnreqorder = findViewById(R.id.btnreqorder);
     }
 
     private void move(){
-        btnback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent back = new Intent(forklift.this, beranda.class);
-                startActivity(back);
-                finish();
-            }
-        });
+    btnback.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent back = new Intent(doser_komatsud21.this, dozer.class);
+            startActivity(back);
+            finish();
+        }
+    });
 
-        btnexkobel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent order = new Intent(forklift.this,Reqorder.class);
-                startActivity(order);
-                finish();
-            }
-        });
+    btnreqorder.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent order = new Intent(doser_komatsud21.this, Reqorder.class);
+            startActivity(order);
+            finish();
+        }
+    });
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_forklift);
+        setContentView(R.layout.activity_dozer);
 
-        //referensi
-        sumber();
-        //eventclick listener
-        move();
+
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -59,5 +59,6 @@ public class forklift extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
     }
 }

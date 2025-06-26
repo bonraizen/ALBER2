@@ -22,11 +22,11 @@
             android:layout_height="47dp"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="10dp"
-            android:contentDescription="Back"
-            android:src="@drawable/iconarrow"
-            android:rotation="180"
             android:background="#FDE5A3"
-            tools:ignore="HardcodedText" />
+            android:contentDescription="Back"
+            android:rotation="180"
+            android:src="@drawable/iconarrow"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
@@ -98,7 +98,7 @@
                     android:layout_marginBottom="16dp"/>
 
                 <Button
-                    android:id="@+id/btnexkobel"
+                    android:id="@+id/btnexkmts"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Detail"
@@ -159,7 +159,7 @@
                     android:textSize="14sp" />
 
                 <Button
-                    android:id="@+id/btnexcat"
+                    android:id="@+id/btnexkbuta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#F49D52"

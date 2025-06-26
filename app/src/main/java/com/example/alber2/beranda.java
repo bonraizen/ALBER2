@@ -70,6 +70,14 @@ public class beranda extends AppCompatActivity {
             }
         });
 
+        btnforklift.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent forklif = new Intent(beranda.this, forklift.class);
+                startActivity(forklif);
+                finish();
+            }
+        });
     };
 
 
