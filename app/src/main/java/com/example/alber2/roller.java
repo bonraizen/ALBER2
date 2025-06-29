@@ -33,7 +33,6 @@ public class roller extends AppCompatActivity {
             public void onClick(View v) {
                 Intent detail = new Intent(roller.this, vibro_roller.class);
                 startActivity(detail);
-                finish();
             }
         });
 
@@ -42,7 +41,6 @@ public class roller extends AppCompatActivity {
             public void onClick(View v) {
                 Intent back = new Intent(roller.this, beranda.class);
                 startActivity(back);
-                finish();
             }
         });
 

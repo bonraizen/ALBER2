@@ -34,7 +34,6 @@ public class dtMiniExc5tn_kblco extends AppCompatActivity {
             public void onClick(View v) {
                 Intent reqorder = new Intent(dtMiniExc5tn_kblco.this,Reqorder.class);
                 startActivity(reqorder);
-                finish();
             }
         });
     }

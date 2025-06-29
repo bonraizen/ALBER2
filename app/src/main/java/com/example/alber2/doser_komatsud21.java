@@ -29,7 +29,7 @@ public class doser_komatsud21 extends AppCompatActivity {
         public void onClick(View v) {
             Intent back = new Intent(doser_komatsud21.this, dozer.class);
             startActivity(back);
-            finish();
+
         }
     });
 
@@ -38,7 +38,7 @@ public class doser_komatsud21 extends AppCompatActivity {
         public void onClick(View v) {
             Intent order = new Intent(doser_komatsud21.this, Reqorder.class);
             startActivity(order);
-            finish();
+
         }
     });
     }

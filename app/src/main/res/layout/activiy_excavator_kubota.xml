@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context=".dtMiniExc5tn_kblco"
+    tools:context=".excabrk_kubota"
     android:background="#FDE5A3">
 
 
@@ -52,7 +52,7 @@
                 android:id="@+id/DetExca5tnKlbe"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:src="@drawable/Kubota_Excavator_Breaker"
+                android:src="@drawable/kubotaexca"
                 android:contentDescription="Mini Excavator"
                 android:layout_marginTop="16dp"
                 tools:ignore="HardcodedText" />
@@ -274,6 +274,7 @@
                     </TextView>
 
                     <Button
+                        android:id="@+id/cekstok"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/ettersedia"

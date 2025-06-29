@@ -4,30 +4,33 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-public class excabrk_kubota extends AppCompatActivity {
+public class dtexcat5tn_comatsu extends AppCompatActivity {
 
+    //Button initial
     ImageButton btnback;
 
-    Button btnreqorder;
+    Button btnreqorder,cekstok;
 
-    private void sumber(){
+    EditText ettersedia ;
+
+    private void sumber() {
         btnback = findViewById(R.id.btnback);
         btnreqorder = findViewById(R.id.btnreqorder);
+        cekstok =findViewById(R.id.cekstok);
+        ettersedia = findViewById(R.id.ettersedia);
     }
 
     private void move(){
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent back = new Intent(excabrk_kubota.this, breakexca.class);
+                Intent back = new Intent(dtexcat5tn_comatsu.this,bucketexca.class);
                 startActivity(back);
             }
         });
@@ -35,7 +38,7 @@ public class excabrk_kubota extends AppCompatActivity {
         btnreqorder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent order = new Intent(excabrk_kubota.this, Reqorder.class);
+                Intent order = new Intent(dtexcat5tn_comatsu.this,Reqorder.class);
                 startActivity(order);
             }
         });
@@ -45,18 +48,13 @@ public class excabrk_kubota extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activiy_excavator_kubota);
+        setContentView(R.layout.activity_dt_exca5tn_cat);
 
-        //Referensi
+        //reference
         sumber();
 
-        //eventclicklisterner
+        //onclicklistener
         move();
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
     }
 }

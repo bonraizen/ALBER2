@@ -28,7 +28,6 @@ public class forklift extends AppCompatActivity {
             public void onClick(View v) {
                 Intent back = new Intent(forklift.this, beranda.class);
                 startActivity(back);
-                finish();
             }
         });
 
@@ -37,7 +36,6 @@ public class forklift extends AppCompatActivity {
             public void onClick(View v) {
                 Intent order = new Intent(forklift.this,Reqorder.class);
                 startActivity(order);
-                finish();
             }
         });
     }

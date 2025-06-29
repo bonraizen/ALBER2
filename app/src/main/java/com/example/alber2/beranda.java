@@ -39,7 +39,6 @@ public class beranda extends AppCompatActivity {
             public void onClick(View v) {
                 Intent eca = new Intent(beranda.this,bucketexca.class);
                 startActivity(eca);
-                finish();
             }
         });
 
@@ -48,7 +47,6 @@ public class beranda extends AppCompatActivity {
             public void onClick(View v) {
                 Intent roller = new Intent(beranda.this, com.example.alber2.roller.class);
                 startActivity(roller);
-                finish();
             }
         });
 
@@ -57,16 +55,14 @@ public class beranda extends AppCompatActivity {
             public void onClick(View v) {
                 Intent usr = new Intent( beranda.this,profileuser.class);
                 startActivity(usr);
-                finish();
             }
         });
 
         btnbreakerexca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent breaker = new Intent( beranda.this,profileuser.class);
+                Intent breaker = new Intent( beranda.this, breakexca.class);
                 startActivity(breaker);
-                finish();
             }
         });
 
@@ -75,7 +71,22 @@ public class beranda extends AppCompatActivity {
             public void onClick(View v) {
                 Intent forklif = new Intent(beranda.this, forklift.class);
                 startActivity(forklif);
-                finish();
+            }
+        });
+
+        btndozer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent btndozer = new Intent(beranda.this, dozer.class);
+                startActivity(btndozer);
+            }
+        });
+
+        btnlift.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent btnlift = new Intent(beranda.this, scissor_lift.class);
+                startActivity(btnlift);
             }
         });
     };

@@ -131,8 +131,7 @@
             android:layout_marginBottom="8dp"
             android:entries="@array/jk_alber"
             android:minHeight="48dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"/>
+            android:background="@color/white" />
         <TextView
 
             android:layout_width="wrap_content"
@@ -215,6 +214,7 @@
             android:id="@+id/btn_kirim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="200dp"
             android:text="KIRIM"
             android:backgroundTint="#F39C12"
             android:textColor="#FFFFFF" />

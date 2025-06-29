@@ -21,46 +21,74 @@
             android:value="ca-app-pub-3940256099942544~3347511713"/>
 
         <activity
+            android:name=".SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".profileuser"
             android:exported="false" />
         <activity
             android:name=".owner_page"
             android:exported="false" />
         <activity
-            android:name=".forklift"
+            android:name=".beranda"
+            android:exported="false" />
+        <activity
+            android:name=".bucketexca"
+            android:exported="false" />
+        <activity
+            android:name=".dtMiniExc5tn_kblco"
+            android:exported="false" />
+        <activity
+            android:name=".dtexca5tn_cat"
+            android:exported="false" />
+        <activity
+            android:name=".dtexcat5tn_comatsu"
             android:exported="false" />
         <activity
             android:name=".dozer"
             android:exported="false" />
         <activity
-            android:name=".breakexca"
+            android:name=".doser_komatsu"
+            android:exported="false" />
+        <activity
+            android:name=".doser_komatsud21"
             android:exported="false" />
         <activity
             android:name=".roller"
             android:exported="false"
             android:label="@string/title_activity_roller" />
         <activity
+            android:name=".vibro_roller"
+            android:exported="false" />
+        <activity
+            android:name=".breakexca"
+            android:exported="false" />
+        <activity
+            android:name=".excabrk_komatsu"
+            android:exported="false" />
+        <activity
+            android:name=".excabrk_kubota"
+            android:exported="false" />
+        <activity
+            android:name=".forklift"
+            android:exported="false" />
+        <activity
+            android:name=".forklift_dosan"
+            android:exported="false" />
+        <activity
+            android:name=".scissor_lift"
+            android:exported="false" />
+        <activity
+            android:name=".dtscissor_lift"
+            android:exported="false" />
+        <activity
             android:name=".Reqorder"
             android:exported="false" />
-        <activity
-            android:name=".dtMiniExc5tn_kblco"
-            android:exported="false" />
-        <activity
-            android:name=".bucketexca"
-            android:exported="false" />
-        <activity
-            android:name=".beranda"
-            android:exported="false" />
-        <activity
-            android:name=".Login"
-            android:exported="false" />
-        <activity
-            android:name=".SignUp"
-            android:exported="false" />
 
-        <activity
-            android:name=".doser_komatsud21"
-            android:exported="false" />
+
 
         <activity
             android:name=".MainActivity"

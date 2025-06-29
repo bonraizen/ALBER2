@@ -30,7 +30,7 @@ public class breakexca extends AppCompatActivity {
             public void onClick(View v) {
                 Intent back = new Intent(breakexca.this, beranda.class);
                 startActivity(back);
-                finish();
+
             }
         });
 
@@ -39,7 +39,7 @@ public class breakexca extends AppCompatActivity {
             public void onClick(View v) {
                 Intent kometsu = new Intent(breakexca.this, excabrk_komatsu.class);
                 startActivity(kometsu);
-                finish();
+
             }
         });
     }

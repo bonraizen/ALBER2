@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context=".dtMiniExc5tn_kblco"
+    tools:context=".dtscissor_lift"
     android:background="#FDE5A3">
 
 

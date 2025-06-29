@@ -28,7 +28,6 @@ public class dozer extends AppCompatActivity {
             public void onClick(View v) {
                 Intent detkobel = new Intent(dozer.this,doser_komatsu.class);
                 startActivity(detkobel);
-                finish();
             }
         });
 
@@ -37,7 +36,6 @@ public class dozer extends AppCompatActivity {
             public void onClick(View v) {
                 Intent back = new Intent(dozer.this, beranda.class);
                 startActivity(back);
-                finish();
             }
         });
 
@@ -46,7 +44,6 @@ public class dozer extends AppCompatActivity {
             public void onClick(View v) {
                 Intent detdozer = new Intent(dozer.this, doser_komatsud21.class);
                 startActivity(detdozer);
-                finish();
             }
         });
     }

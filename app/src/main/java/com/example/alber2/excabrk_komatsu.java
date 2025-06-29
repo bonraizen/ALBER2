@@ -28,7 +28,6 @@ public class excabrk_komatsu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent back = new Intent(excabrk_komatsu.this, breakexca.class);
                 startActivity(back);
-                finish();
             }
         });
 
@@ -37,7 +36,6 @@ public class excabrk_komatsu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent order = new Intent(excabrk_komatsu.this,Reqorder.class);
                 startActivity(order);
-                finish();
             }
         });
     }

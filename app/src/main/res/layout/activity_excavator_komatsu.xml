@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context=".dtMiniExc5tn_kblco"
+    tools:context=".excabrk_komatsu"
     android:background="#FDE5A3">
 
 
@@ -52,7 +52,8 @@
                 android:id="@+id/DetExca5tnKlbe"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:src="@drawable/Komatsu_Excavator_Breaker"
+                android:src="@drawable/komatsu_excavator_breaker1"
+                android:scaleType="fitCenter"
                 android:contentDescription="Mini Excavator"
                 android:layout_marginTop="16dp"
                 tools:ignore="HardcodedText" />

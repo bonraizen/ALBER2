@@ -65,7 +65,6 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent pindahsignup = new Intent(Login.this, SignUp.class);
                 startActivity(pindahsignup);
-                finish();
             }
         });
 
@@ -74,7 +73,6 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent pindahsignup = new Intent(Login.this, MainActivity.class);
                 startActivity(pindahsignup);
-                finish();
             }
         });
 

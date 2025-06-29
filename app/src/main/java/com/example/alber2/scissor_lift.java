@@ -26,7 +26,6 @@ public class scissor_lift  extends AppCompatActivity {
             public void onClick(View v) {
                Intent back = new Intent(scissor_lift.this,beranda.class);
                startActivity(back);
-               finish();
             }
         });
 
@@ -35,7 +34,6 @@ public class scissor_lift  extends AppCompatActivity {
             public void onClick(View v) {
                 Intent dtsiccor = new Intent(scissor_lift.this, dtscissor_lift.class);
                 startActivity(dtsiccor);
-                finish();
             }
         });
     }
