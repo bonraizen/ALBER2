@@ -92,10 +92,11 @@ public class doser_komatsud21 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_dozer);
+        setContentView(R.layout.activity_doser_komatsu_d21p);
 
+        sumber();
 
-
+        move();
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

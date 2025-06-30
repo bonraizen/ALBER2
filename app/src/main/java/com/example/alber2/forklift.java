@@ -34,7 +34,7 @@ public class forklift extends AppCompatActivity {
         btnexkobel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent order = new Intent(forklift.this,Reqorder.class);
+                Intent order = new Intent(forklift.this,forklift_dosan.class);
                 startActivity(order);
             }
         });

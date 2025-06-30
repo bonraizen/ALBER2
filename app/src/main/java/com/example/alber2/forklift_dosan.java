@@ -31,6 +31,8 @@ public class forklift_dosan extends AppCompatActivity {
     private void sumber(){
         btnback = findViewById(R.id.btnback);
         btnreqorder = findViewById(R.id.btnreqorder);
+        cekstok = findViewById(R.id.cekstok);
+        ettersedia = findViewById(R.id.ettersedia);
     }
 
     private void move(){

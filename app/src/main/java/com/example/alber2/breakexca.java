@@ -42,6 +42,15 @@ public class breakexca extends AppCompatActivity {
 
             }
         });
+
+        btnexkbuta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent kubota = new Intent(breakexca.this, excabrk_kubota.class);
+                startActivity(kubota);
+
+            }
+        });
     }
 
     @Override
