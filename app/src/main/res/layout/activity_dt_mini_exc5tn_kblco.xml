@@ -32,11 +32,11 @@
                 android:layout_height="47dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="10dp"
-                android:contentDescription="Back"
-                android:src="@drawable/iconarrow"
-                android:rotation="180"
                 android:background="#FDE5A3"
-                tools:ignore="HardcodedText" />
+                android:contentDescription="Back"
+                android:rotation="180"
+                android:src="@drawable/iconarrow"
+                tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/title"
@@ -256,10 +256,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="30dp"
+                        android:enabled="false"
                         android:hint="."
-                        android:textSize="20sp"
                         android:inputType="text"
-                        android:minHeight="48dp"></EditText>
+                        android:minHeight="48dp"
+                        android:textSize="20sp"></EditText>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -272,6 +273,7 @@
                     </TextView>
 
                     <Button
+                        android:id="@+id/cekstok"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/ettersedia"

@@ -256,6 +256,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="30dp"
+                        android:enabled="false"
                         android:hint="."
                         android:textSize="20sp"
                         android:inputType="text"

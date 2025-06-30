@@ -13,10 +13,38 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class bucketexca extends AppCompatActivity {
 
-    Button detexcatnklbco;
+    Button detexcatnklbco,btnexcat,btnexkmts;
 
     public void sumber(){
+        btnexcat = findViewById(R.id.btnexcat);
+        btnexkmts = findViewById(R.id.btnexkmts);
         detexcatnklbco = findViewById(R.id.btnexkobel);
+    }
+
+    private void move(){
+        detexcatnklbco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent detilexcatnklbco = new Intent(bucketexca.this,dtMiniExc5tn_kblco.class);
+                startActivity(detilexcatnklbco);
+            }
+        });
+
+        btnexcat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent cat = new Intent(bucketexca.this,dtexca5tn_cat.class);
+                startActivity(cat);
+            }
+        });
+
+        btnexkmts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent komatsu = new Intent(bucketexca.this,dtexcat5tn_comatsu.class);
+                startActivity(komatsu);
+            }
+        });
     }
 
     @Override
@@ -27,14 +55,7 @@ public class bucketexca extends AppCompatActivity {
 
         sumber();
 
-        detexcatnklbco.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent detilexcatnklbco = new Intent(bucketexca.this,dtMiniExc5tn_kblco.class);
-                startActivity(detilexcatnklbco);
-            }
-        });
-
+        move();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
