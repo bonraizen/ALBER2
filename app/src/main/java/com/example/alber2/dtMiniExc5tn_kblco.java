@@ -93,6 +93,7 @@ public class dtMiniExc5tn_kblco extends AppCompatActivity {
 
         sumber();
 
+        move();
 
     }
     }

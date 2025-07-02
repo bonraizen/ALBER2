@@ -39,7 +39,7 @@ public class forklift_dosan extends AppCompatActivity {
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent back = new Intent(forklift_dosan.this, beranda.class);
+                Intent back = new Intent(forklift_dosan.this, forklift.class);
                 startActivity(back);
             }
         });

@@ -62,7 +62,7 @@ public class dtexca5tn_cat extends AppCompatActivity {
 
     private void setCekstok(){
         DatabaseReference db;
-        String inisial = "exca_5tn_cat ";
+        String inisial = "exca_5tn_cat";
         db = FirebaseDatabase.getInstance().getReference("Stok").child(inisial);
         db.addValueEventListener(new ValueEventListener() {
             @Override
