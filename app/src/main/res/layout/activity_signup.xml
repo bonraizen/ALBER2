@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main"
-    tools:context=".SignUp"
+    tools:context="com.alber2m.app.SignUp"
     android:orientation="vertical"
     android:background="#FDE5A3">
 
@@ -171,12 +171,6 @@
                 android:maxHeight="90dp"
                 android:scaleType="fitCenter" />
             <!-- Upload Foto -->
-            <Button
-                android:id="@+id/btn_uploadktp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Upload Foto" />
 
             <!-- Password -->
             <TextView
@@ -261,7 +255,9 @@
                     android:text="SIGN IN"
                     android:textColor="#4422BF"
                     android:textStyle="bold"
-                    android:visibility="visible" />
+                    android:visibility="visible"
+                    android:layout_marginBottom="200dp"/>
+
             </LinearLayout>
 
         </LinearLayout>

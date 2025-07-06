@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FDE5A3"
-    tools:context=".owner_page">
+    tools:context="com.alber2m.app.owner_page">
 
 
     <RelativeLayout

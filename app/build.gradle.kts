@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.alber2"
+    namespace = "com.alber2m.app"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.alber2"
+        applicationId = "com.alber2m.app"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -19,7 +19,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

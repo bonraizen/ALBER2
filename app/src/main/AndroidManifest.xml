@@ -21,77 +21,77 @@
             android:value="ca-app-pub-3940256099942544~3347511713"/>
 
         <activity
-            android:name=".SignUp"
+            android:name="com.alber2m.app.SignUp"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name="com.alber2m.app.Login"
             android:exported="false" />
         <activity
-            android:name=".profileuser"
+            android:name="com.alber2m.app.profileuser"
             android:exported="false" />
         <activity
-            android:name=".owner_page"
+            android:name="com.alber2m.app.owner_page"
             android:exported="false" />
         <activity
-            android:name=".beranda"
+            android:name="com.alber2m.app.beranda"
             android:exported="false" />
         <activity
-            android:name=".bucketexca"
+            android:name="com.alber2m.app.bucketexca"
             android:exported="false" />
         <activity
-            android:name=".dtMiniExc5tn_kblco"
+            android:name="com.alber2m.app.dtMiniExc5tn_kblco"
             android:exported="false" />
         <activity
-            android:name=".dtexca5tn_cat"
+            android:name="com.alber2m.app.dtexca5tn_cat"
             android:exported="false" />
         <activity
-            android:name=".dtexcat5tn_comatsu"
+            android:name="com.alber2m.app.dtexcat5tn_comatsu"
             android:exported="false" />
         <activity
-            android:name=".dozer"
+            android:name="com.alber2m.app.dozer"
             android:exported="false" />
         <activity
-            android:name=".doser_komatsu"
+            android:name="com.alber2m.app.doser_komatsu"
             android:exported="false" />
         <activity
-            android:name=".doser_komatsud21"
+            android:name="com.alber2m.app.doser_komatsud21"
             android:exported="false" />
         <activity
-            android:name=".roller"
+            android:name="com.alber2m.app.roller"
             android:exported="false"
             android:label="@string/title_activity_roller" />
         <activity
-            android:name=".vibro_roller"
+            android:name="com.alber2m.app.vibro_roller"
             android:exported="false" />
         <activity
-            android:name=".breakexca"
+            android:name="com.alber2m.app.breakexca"
             android:exported="false" />
         <activity
-            android:name=".excabrk_komatsu"
+            android:name="com.alber2m.app.excabrk_komatsu"
             android:exported="false" />
         <activity
-            android:name=".excabrk_kubota"
+            android:name="com.alber2m.app.excabrk_kubota"
             android:exported="false" />
         <activity
-            android:name=".forklift"
+            android:name="com.alber2m.app.forklift"
             android:exported="false" />
         <activity
-            android:name=".forklift_dosan"
+            android:name="com.alber2m.app.forklift_dosan"
             android:exported="false" />
         <activity
-            android:name=".scissor_lift"
+            android:name="com.alber2m.app.scissor_lift"
             android:exported="false" />
         <activity
-            android:name=".dtscissor_lift"
+            android:name="com.alber2m.app.dtscissor_lift"
             android:exported="false" />
         <activity
-            android:name=".Reqorder"
+            android:name="com.alber2m.app.Reqorder"
             android:exported="false" />
 
 
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.alber2m.app.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

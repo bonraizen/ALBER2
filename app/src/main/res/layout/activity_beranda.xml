@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main"
-    tools:context=".beranda"
+    android:background="#FBE2A5"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#FBE2A5">
+    tools:context="com.alber2m.app.beranda">
 
 
     <LinearLayout
@@ -21,10 +21,10 @@
             android:id="@+id/adView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
             ads:adSize="BANNER"
-            ads:adUnitId="@string/banner_ad_unit_id"></com.google.android.gms.ads.AdView>
+            ads:adUnitId="@string/banner_ad_unit_id" />
 
         <ImageButton
             android:id="@+id/btnprofiluser"
@@ -37,312 +37,312 @@
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        app:cardBackgroundColor="@color/tranparent"
-        android:layout_marginTop="10dp"
-        app:cardCornerRadius="20dp"
-        >
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/logo"
-            android:layout_marginTop="20dp"
-            android:padding="8dp">
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/tranparent"
+            app:cardCornerRadius="20dp">
 
-            <ImageView
-                android:id="@+id/searchIcon"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/find"
-                android:contentDescription="Search Icon" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/logo"
+                android:padding="8dp"
+                android:scaleType="centerCrop">
 
-            <EditText
-                android:id="@+id/searchEditText"
-                android:layout_width="1dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:padding="1dp"
-                android:shadowColor="@color/black"
-                android:gravity="center"
-                android:hint="Search"
-                android:inputType="text"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:textSize="15dp"
-                tools:ignore="TouchTargetSizeCheck,TextSizeCheck" />
-        </LinearLayout>
+                <ImageView
+                    android:id="@+id/searchIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="Search Icon"
+                    android:src="@drawable/find" />
+
+                <EditText
+                    android:id="@+id/searchEditText"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:hint="Search"
+                    android:inputType="text"
+                    android:padding="1dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:shadowColor="@color/black"
+                    android:textSize="15dp"
+                    tools:ignore="TouchTargetSizeCheck,TextSizeCheck" />
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
         <!-- Category Title -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CATEGORY"
-            android:textSize="24sp"
-            android:textStyle="bold"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="8dp"
-            android:textColor="#000000"/>
+            android:text="CATEGORY"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <!-- Category Grid -->
-         <androidx.cardview.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:cardCornerRadius="40dp"
-            app:cardBackgroundColor="@color/tranparent">
+            app:cardBackgroundColor="@color/tranparent"
+            app:cardCornerRadius="40dp">
 
-             <GridLayout
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:columnCount="2"
-                 android:padding="16dp"
-                 android:rowCount="3">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:padding="16dp"
+                android:rowCount="3">
 
-                 <!-- Category Item 1 -->
-                 <LinearLayout
-                     android:layout_width="0dp"
-                     android:layout_height="wrap_content"
-                     android:layout_columnWeight="1"
-                     android:layout_marginTop="8dp"
-                     android:gravity="center"
-                     android:orientation="vertical">
+                <!-- Category Item 1 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                     <androidx.cardview.widget.CardView
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         app:cardCornerRadius="30dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="30dp">
 
-                         <LinearLayout
-                             android:layout_width="wrap_content"
-                             android:layout_height="wrap_content"
-                             android:gravity="center"
-                             android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
 
-                             <ImageButton
-                                 android:id="@+id/btnexca"
-                                 android:layout_width="166dp"
-                                 android:layout_height="107dp"
-                                 android:adjustViewBounds="true"
-                                 android:backgroundTint="@color/tranparent"
-                                 android:contentDescription="bucket_excavator"
-                                 android:scaleType="fitCenter"
-                                 android:src="@drawable/exca5tn_cat"
-                                 android:visibility="visible" />
+                            <ImageButton
+                                android:id="@+id/btnexca"
+                                android:layout_width="166dp"
+                                android:layout_height="107dp"
+                                android:adjustViewBounds="true"
+                                android:backgroundTint="@color/tranparent"
+                                android:contentDescription="bucket_excavator"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/exca5tn_cat"
+                                android:visibility="visible" />
 
-                             <TextView
-                                 android:layout_width="wrap_content"
-                                 android:layout_height="wrap_content"
-                                 android:text="Bucket Excavator" />
-                         </LinearLayout>
-                     </androidx.cardview.widget.CardView>
-                 </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bucket Excavator" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
-                 <!-- Category Item 2 -->
-                 <LinearLayout
-                     android:layout_width="0dp"
-                     android:layout_height="wrap_content"
-                     android:layout_columnWeight="1"
-                     android:layout_marginLeft="8dp"
-                     android:gravity="center"
-                     android:orientation="vertical">
+                <!-- Category Item 2 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                     <androidx.cardview.widget.CardView
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         app:cardCornerRadius="30dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="30dp">
 
-                         <LinearLayout
-                             android:layout_width="wrap_content"
-                             android:layout_height="wrap_content"
-                             android:gravity="center"
-                             android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
 
-                             <ImageButton
-                                 android:id="@+id/btnroller"
-                                 android:layout_width="wrap_content"
-                                 android:layout_height="wrap_content"
-                                 android:adjustViewBounds="true"
-                                 android:backgroundTint="@color/tranparent"
-                                 android:contentDescription="bucket_excavator"
-                                 android:scaleType="fitCenter"
-                                 android:src="@drawable/vibrol"
-                                 android:visibility="visible" />
+                            <ImageButton
+                                android:id="@+id/btnroller"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:backgroundTint="@color/tranparent"
+                                android:contentDescription="bucket_excavator"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/vibrol"
+                                android:visibility="visible" />
 
-                             <TextView
-                                 android:layout_width="wrap_content"
-                                 android:layout_height="wrap_content"
-                                 android:layout_marginTop="0dp"
-                                 android:text="Vibro Roller" />
-                         </LinearLayout>
-                     </androidx.cardview.widget.CardView>
-                 </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0dp"
+                                android:text="Vibro Roller" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
-                 <!-- Category Item 3 -->
-                 <LinearLayout
-                     android:layout_width="0dp"
-                     android:layout_height="wrap_content"
-                     android:layout_columnWeight="1"
-                     android:gravity="center"
-                     android:orientation="vertical">
+                <!-- Category Item 3 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                     <androidx.cardview.widget.CardView
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:layout_marginTop="8dp"
-                         app:cardCornerRadius="30dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="30dp">
 
-                         <LinearLayout
-                             android:layout_width="wrap_content"
-                             android:layout_height="wrap_content"
-                             android:gravity="center"
-                             android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
 
-                             <ImageButton
-                                 android:id="@+id/btndozer"
-                                 android:layout_width="wrap_content"
-                                 android:layout_height="wrap_content"
-                                 android:adjustViewBounds="true"
-                                 android:backgroundTint="@color/tranparent"
-                                 android:contentDescription="bucket_excavator"
-                                 android:cropToPadding="true"
-                                 android:scaleType="fitCenter"
-                                 android:src="@drawable/doser"
-                                 android:visibility="visible" />
+                            <ImageButton
+                                android:id="@+id/btndozer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:backgroundTint="@color/tranparent"
+                                android:contentDescription="bucket_excavator"
+                                android:cropToPadding="true"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/doser"
+                                android:visibility="visible" />
 
-                             <TextView
-                                 android:layout_width="wrap_content"
-                                 android:layout_height="wrap_content"
-                                 android:text="Dozer" />
-                         </LinearLayout>
-                     </androidx.cardview.widget.CardView>
-                 </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dozer" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
-                 <!-- Category Item 4 -->
-                 <LinearLayout
-                     android:layout_width="0dp"
-                     android:layout_height="wrap_content"
-                     android:layout_columnWeight="1"
-                     android:layout_marginLeft="8dp"
-                     android:layout_marginTop="8dp"
-                     android:gravity="center"
-                     android:orientation="vertical">
+                <!-- Category Item 4 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                     <androidx.cardview.widget.CardView
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         app:cardCornerRadius="30dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="30dp">
 
-                         <LinearLayout
-                             android:layout_width="wrap_content"
-                             android:layout_height="wrap_content"
-                             android:gravity="center"
-                             android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
 
-                             <ImageButton
-                                 android:id="@+id/btnbreakerexca"
-                                 android:layout_width="wrap_content"
-                                 android:layout_height="wrap_content"
-                                 android:adjustViewBounds="true"
-                                 android:backgroundTint="@color/tranparent"
-                                 android:contentDescription="bucket_excavator"
-                                 android:scaleType="fitCenter"
-                                 android:src="@drawable/exca5tn_klbco"
-                                 android:visibility="visible" />
+                            <ImageButton
+                                android:id="@+id/btnbreakerexca"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:backgroundTint="@color/tranparent"
+                                android:contentDescription="bucket_excavator"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/exca5tn_klbco"
+                                android:visibility="visible" />
 
-                             <TextView
-                                 android:layout_width="wrap_content"
-                                 android:layout_height="wrap_content"
-                                 android:text="Breaker Excavator" />
-                         </LinearLayout>
-                     </androidx.cardview.widget.CardView>
-                 </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Breaker Excavator" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
-                 <!-- Category Item 5 -->
-                 <LinearLayout
-                     android:layout_width="0dp"
-                     android:layout_height="wrap_content"
-                     android:layout_columnWeight="1"
-                     android:layout_marginTop="8dp"
-                     android:gravity="center"
-                     android:orientation="vertical">
+                <!-- Category Item 5 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                     <androidx.cardview.widget.CardView
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         app:cardCornerRadius="30dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="30dp">
 
-                         <LinearLayout
-                             android:layout_width="wrap_content"
-                             android:layout_height="wrap_content"
-                             android:gravity="center"
-                             android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
 
-                             <ImageButton
-                                 android:id="@+id/btnforklift"
-                                 android:layout_width="wrap_content"
-                                 android:layout_height="wrap_content"
-                                 android:adjustViewBounds="true"
-                                 android:backgroundTint="@color/tranparent"
-                                 android:contentDescription="bucket_excavator"
-                                 android:scaleType="fitCenter"
-                                 android:src="@drawable/forklif_b1"
-                                 android:visibility="visible" />
+                            <ImageButton
+                                android:id="@+id/btnforklift"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:backgroundTint="@color/tranparent"
+                                android:contentDescription="bucket_excavator"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/forklif_b1"
+                                android:visibility="visible" />
 
-                             <TextView
-                                 android:layout_width="wrap_content"
-                                 android:layout_height="wrap_content"
-                                 android:text="Forklift" />
-                         </LinearLayout>
-                     </androidx.cardview.widget.CardView>
-                 </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Forklift" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
-                 <!-- Category Item 6 -->
-                 <LinearLayout
-                     android:layout_width="0dp"
-                     android:layout_height="wrap_content"
-                     android:layout_columnWeight="1"
-                     android:layout_marginLeft="8dp"
-                     android:layout_marginTop="8dp"
-                     android:gravity="center"
-                     android:orientation="vertical">
+                <!-- Category Item 6 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                     <androidx.cardview.widget.CardView
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         app:cardCornerRadius="30dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="30dp">
 
-                         <LinearLayout
-                             android:layout_width="wrap_content"
-                             android:layout_height="wrap_content"
-                             android:gravity="center"
-                             android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
 
-                             <ImageButton
-                                 android:id="@+id/btnlift"
-                                 android:layout_width="wrap_content"
-                                 android:layout_height="wrap_content"
-                                 android:adjustViewBounds="true"
-                                 android:backgroundTint="@color/tranparent"
-                                 android:contentDescription="bucket_excavator"
-                                 android:scaleType="fitCenter"
-                                 android:src="@drawable/lift_b1"
-                                 android:visibility="visible" />
+                            <ImageButton
+                                android:id="@+id/btnlift"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                android:backgroundTint="@color/tranparent"
+                                android:contentDescription="bucket_excavator"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/lift_b1"
+                                android:visibility="visible" />
 
-                             <TextView
-                                 android:layout_width="wrap_content"
-                                 android:layout_height="wrap_content"
-                                 android:text="Scissor Lift" />
-                         </LinearLayout>
-                     </androidx.cardview.widget.CardView>
-                 </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Scissor Lift" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
-             </GridLayout>
-         </androidx.cardview.widget.CardView>
+            </GridLayout>
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 
 </ScrollView>

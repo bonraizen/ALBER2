@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context=".dtexcat5tn_comatsu"
+    tools:context="com.alber2m.app.dtexcat5tn_comatsu"
     android:background="#FDE5A3">
 
 
@@ -273,16 +273,6 @@
                         >
                     </TextView>
 
-                    <Button
-                        android:id="@+id/cekstok"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/ettersedia"
-                        android:gravity="center"
-                        android:layout_marginTop="40dp"
-                        android:layout_marginLeft="110dp"
-                        android:backgroundTint="#F49D52"
-                        android:text="cek"></Button>
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>

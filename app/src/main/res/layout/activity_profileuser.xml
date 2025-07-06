@@ -52,7 +52,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nama           :"
+                android:text="          Nama            :"
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 android:minEms="5" />
@@ -75,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="Perusahaan :"
+                android:text="          Perusahaan :"
                 android:textSize="18sp"
                 android:minEms="5" />
 
@@ -98,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="Email            : "
+                android:text="          Email            : "
                 android:textSize="18sp"
                 android:minEms="5" />
 
@@ -121,7 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="No Tlp          : "
+                android:text="          No Tlp          : "
                 android:textSize="18sp"
                 android:minEms="5" />
 
@@ -141,7 +141,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:layout_marginTop="24dp"
-        android:text="HISTORY ORDER"
+        android:text="      HISTORY ORDER"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -168,7 +168,7 @@
                     android:layout_weight="1"
                     android:padding="8dp"
                     android:textColor="@color/black"
-                    android:text="No"
+                    android:text="     No"
                     android:textStyle="bold" />
 
                 <TextView
@@ -176,7 +176,7 @@
                     android:layout_weight="2"
                     android:textColor="@color/black"
                     android:padding="8dp"
-                    android:text="Jenis ALBER"
+                    android:text="   Jenis ALBER"
                     android:textStyle="bold" />
 
                 <TextView
@@ -184,7 +184,7 @@
                     android:layout_weight="2"
                     android:textColor="@color/black"
                     android:padding="8dp"
-                    android:text="Tanggal Sewa"
+                    android:text=" Tanggal Sewa"
                     android:textStyle="bold" />
 
                 <TextView
@@ -193,7 +193,7 @@
                     android:textColor="@color/black"
                     android:padding="8dp"
                     android:textStyle="bold"
-                    android:text="Status"/>
+                    android:text="   Status"/>
             </TableRow>
 
         </TableLayout>
