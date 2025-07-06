@@ -24,14 +24,13 @@ import com.google.firebase.database.ValueEventListener;
 public class forklift_dosan extends AppCompatActivity {
 
     ImageButton btnback;
-    Button btnreqorder,cekstok;
+    Button btnreqorder;
 
     EditText ettersedia;
 
     private void sumber(){
         btnback = findViewById(R.id.btnback);
         btnreqorder = findViewById(R.id.btnreqorder);
-        cekstok = findViewById(R.id.cekstok);
         ettersedia = findViewById(R.id.ettersedia);
     }
 
@@ -49,13 +48,6 @@ public class forklift_dosan extends AppCompatActivity {
             public void onClick(View v) {
                 Intent order = new Intent(forklift_dosan.this,Reqorder.class);
                 startActivity(order);
-            }
-        });
-
-        cekstok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setCekstok();
             }
         });
 
@@ -93,6 +85,8 @@ public class forklift_dosan extends AppCompatActivity {
 
         //Reference
         sumber();
+
+        setCekstok();
 
         //cliclistener
         move();

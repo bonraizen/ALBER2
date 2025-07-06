@@ -9,17 +9,11 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.example.alber2" />
+                  <option name="appId" value="com.alber2m.app" />
                   <option name="mobileSdkAppId" value="1:864636360006:android:06a9eae06feaea3a2f8147" />
                   <option name="projectId" value="sewa-alber" />
                   <option name="projectNumber" value="864636360006" />
                 </ConnectionSetting>
-              </option>
-              <option name="failureTypes">
-                <list>
-                  <option value="FATAL" />
-                  <option value="ANR" />
-                </list>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
               <option name="timeIntervalDays" value="THIRTY_DAYS" />

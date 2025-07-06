@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class doser_komatsu extends AppCompatActivity {
 
-    Button btnreqorder,cekstok;
+    Button btnreqorder;
 
     ImageButton btnback;
 
@@ -30,7 +30,6 @@ public class doser_komatsu extends AppCompatActivity {
         btnreqorder = findViewById(R.id.btnreqorder);
         btnback = findViewById(R.id.btnback);
         ettersedia = findViewById(R.id.ettersedia);
-        cekstok =findViewById(R.id.cekstok);
     }
 
     private void move(){
@@ -47,12 +46,6 @@ public class doser_komatsu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent  order = new Intent(doser_komatsu.this,Reqorder.class);
                 startActivity(order);
-            }
-        });
-        cekstok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setCekstok();
             }
         });
 
@@ -88,6 +81,8 @@ public class doser_komatsu extends AppCompatActivity {
         setContentView(R.layout.activity_doser_komatsu);
 
         sumber();
+
+        setCekstok();
 
         move();
 

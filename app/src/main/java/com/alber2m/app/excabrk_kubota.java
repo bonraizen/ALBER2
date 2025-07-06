@@ -27,13 +27,12 @@ public class excabrk_kubota extends AppCompatActivity {
 
     EditText ettersedia;
 
-    Button btnreqorder,cekstok;
+    Button btnreqorder;
 
     private void sumber(){
         btnback = findViewById(R.id.btnback);
         btnreqorder = findViewById(R.id.btnreqorder);
         ettersedia = findViewById(R.id.ettersedia);
-        cekstok = findViewById(R.id.cekstok);
     }
 
     private void move(){
@@ -50,13 +49,6 @@ public class excabrk_kubota extends AppCompatActivity {
             public void onClick(View v) {
                 Intent order = new Intent(excabrk_kubota.this, Reqorder.class);
                 startActivity(order);
-            }
-        });
-
-        cekstok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setCekstok();
             }
         });
     }
@@ -93,6 +85,8 @@ public class excabrk_kubota extends AppCompatActivity {
 
         //Referensi
         sumber();
+
+        setCekstok();
 
         //eventclicklisterner
         move();

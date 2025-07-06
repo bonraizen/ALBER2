@@ -22,14 +22,13 @@ public class dtscissor_lift extends AppCompatActivity {
 
     ImageButton btnback;
 
-    Button btnreqorder,cekstok;
+    Button btnreqorder;
 
     EditText ettersedia;
 
     private void sumber(){
         btnback = findViewById(R.id.btnback);
         btnreqorder = findViewById(R.id.btnreqorder);
-        cekstok = findViewById(R.id.cekstok);
         ettersedia = findViewById(R.id.ettersedia);
     }
 
@@ -47,13 +46,6 @@ public class dtscissor_lift extends AppCompatActivity {
             public void onClick(View v) {
                 Intent order = new Intent(dtscissor_lift.this,Reqorder.class);
                 startActivity(order);
-            }
-        });
-
-        cekstok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setCekstok();
             }
         });
 
@@ -91,6 +83,8 @@ public class dtscissor_lift extends AppCompatActivity {
 
         //Reference
         sumber();
+
+        setCekstok();
         //clicklistener
         move();
 

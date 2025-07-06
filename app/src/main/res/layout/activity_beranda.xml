@@ -9,7 +9,7 @@
     android:background="#FBE2A5"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="com.alber2m.app.beranda">
+    >
 
 
     <LinearLayout

@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class vibro_roller extends AppCompatActivity{
 
-    Button btnreqorder,cekstok;
+    Button btnreqorder;
     ImageButton btnback;
 
     EditText ettersedia;
@@ -28,7 +28,6 @@ public class vibro_roller extends AppCompatActivity{
     private void sumber(){
         btnreqorder = findViewById(R.id.btnreqorder);
         btnback = findViewById(R.id.btnback);
-        cekstok = findViewById(R.id.cekstok);
         ettersedia = findViewById(R.id.ettersedia);
     }
 
@@ -46,13 +45,6 @@ public class vibro_roller extends AppCompatActivity{
             public void onClick(View v) {
                 Intent order = new Intent(vibro_roller.this,Reqorder.class);
                 startActivity(order);
-            }
-        });
-
-        cekstok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setCekstok();
             }
         });
     }
@@ -89,6 +81,9 @@ public class vibro_roller extends AppCompatActivity{
 
 
         sumber();
+
+        setCekstok();
+
         move();
     }
 }

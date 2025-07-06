@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class dtMiniExc5tn_kblco extends AppCompatActivity {
 
-    Button btnreqorder,cekstok;
+    Button btnreqorder;
 
     ImageButton btnback;
 
@@ -28,7 +28,6 @@ public class dtMiniExc5tn_kblco extends AppCompatActivity {
 
     public void sumber(){
         btnreqorder = findViewById(R.id.btnreqorder);
-        cekstok = findViewById(R.id.cekstok);
         btnback = findViewById(R.id.btnback);
         ettersedia = findViewById(R.id.ettersedia);
     }
@@ -50,12 +49,6 @@ public class dtMiniExc5tn_kblco extends AppCompatActivity {
             }
         });
 
-        cekstok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setCekstok();
-            }
-        });
     }
 
     private void setCekstok(){
@@ -88,6 +81,8 @@ public class dtMiniExc5tn_kblco extends AppCompatActivity {
         setContentView(R.layout.activity_dt_mini_exc5tn_kblco);
 
         sumber();
+
+        setCekstok();
 
         move();
 

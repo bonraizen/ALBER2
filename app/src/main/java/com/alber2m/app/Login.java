@@ -82,6 +82,22 @@ public class Login extends AppCompatActivity {
                 lupa();
             }
         });
+
+        txtshow.setOnClickListener(v -> {
+            // Check if the password is currently visible
+            boolean passwordVisible = (password_input.getTransformationMethod() == null);
+
+            if (passwordVisible) {
+                // If visible, hide the password
+                password_input.setTransformationMethod(PasswordTransformationMethod.getInstance());
+            } else {
+                // If hidden, show the password
+                password_input.setTransformationMethod(null);
+            }
+
+            // Move the cursor to the end of the text to keep it visible after the change
+            password_input.setSelection(password_input.getText().length());
+        });
     }
 
     private void lupa(){
@@ -183,21 +199,7 @@ public class Login extends AppCompatActivity {
             });
 
 
-        txtshow.setOnClickListener(v -> {
-            boolean passwordVisible = (password_input.getTransformationMethod() == null);
 
-            if (passwordVisible) {
-                // Sembunyikan password
-                password_input.setTransformationMethod(PasswordTransformationMethod.getInstance());
-
-            } else {
-                // Tampilkan password
-                password_input.setTransformationMethod(null);
-            }
-
-            // Pindahkan kursor ke akhir teks agar tetap terlihat saat perubahan
-            password_input.setSelection(password_input.getText().length());
-        });
 
 
 

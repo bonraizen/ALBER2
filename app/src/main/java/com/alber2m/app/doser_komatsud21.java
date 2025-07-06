@@ -25,14 +25,13 @@ public class doser_komatsud21 extends AppCompatActivity {
 
     ImageButton btnback;
 
-    Button btnreqorder,cekstok;
+    Button btnreqorder;
 
     EditText ettersedia;
 
     private void sumber(){
         btnback = findViewById(R.id.btnback);
         btnreqorder = findViewById(R.id.btnreqorder);
-        cekstok = findViewById(R.id.cekstok);
         ettersedia = findViewById(R.id.ettersedia);
     }
 
@@ -52,13 +51,6 @@ public class doser_komatsud21 extends AppCompatActivity {
             Intent order = new Intent(doser_komatsud21.this, Reqorder.class);
             startActivity(order);
 
-        }
-    });
-
-    cekstok.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            setCekstok();
         }
     });
 
@@ -95,6 +87,8 @@ public class doser_komatsud21 extends AppCompatActivity {
         setContentView(R.layout.activity_doser_komatsu_d21p);
 
         sumber();
+
+        setCekstok();
 
         move();
 

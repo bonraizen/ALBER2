@@ -23,14 +23,13 @@ public class dtexca5tn_cat extends AppCompatActivity {
     //Button initial
     ImageButton btnback;
 
-    Button btnreqorder,cekstok;
+    Button btnreqorder;
 
     EditText ettersedia ;
 
     private void sumber() {
         btnback = findViewById(R.id.btnback);
         btnreqorder = findViewById(R.id.btnreqorder);
-        cekstok =findViewById(R.id.cekstok);
         ettersedia = findViewById(R.id.ettersedia);
     }
 
@@ -49,13 +48,6 @@ public class dtexca5tn_cat extends AppCompatActivity {
             public void onClick(View v) {
                 Intent order = new Intent(dtexca5tn_cat.this,Reqorder.class);
                 startActivity(order);
-            }
-        });
-
-        cekstok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setCekstok();
             }
         });
     }
@@ -93,6 +85,7 @@ public class dtexca5tn_cat extends AppCompatActivity {
         //reference
         sumber();
 
+        setCekstok();
         //onclicklistener
         move();
 

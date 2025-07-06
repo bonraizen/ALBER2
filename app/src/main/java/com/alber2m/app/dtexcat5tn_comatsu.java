@@ -23,14 +23,13 @@ public class dtexcat5tn_comatsu extends AppCompatActivity {
     //Button initial
     ImageButton btnback;
 
-    Button btnreqorder,cekstok;
+    Button btnreqorder;
 
     EditText ettersedia ;
 
     private void sumber() {
         btnback = findViewById(R.id.btnback);
         btnreqorder = findViewById(R.id.btnreqorder);
-        cekstok =findViewById(R.id.cekstok);
         ettersedia = findViewById(R.id.ettersedia);
     }
 
@@ -51,12 +50,6 @@ public class dtexcat5tn_comatsu extends AppCompatActivity {
             }
         });
 
-        cekstok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setCekstok();
-            }
-        });
     }
 
     private void setCekstok(){
@@ -91,6 +84,8 @@ public class dtexcat5tn_comatsu extends AppCompatActivity {
 
         //reference
         sumber();
+
+        setCekstok();
 
         //onclicklistener
         move();

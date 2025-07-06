@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,11 +15,13 @@ import androidx.core.view.WindowInsetsCompat;
 public class bucketexca extends AppCompatActivity {
 
     Button detexcatnklbco,btnexcat,btnexkmts;
+    ImageButton btnback;
 
     public void sumber(){
         btnexcat = findViewById(R.id.btnexcat);
         btnexkmts = findViewById(R.id.btnexkmts);
         detexcatnklbco = findViewById(R.id.btnexkobel);
+        btnback = findViewById(R.id.btnback);
     }
 
     private void move(){
@@ -43,6 +46,14 @@ public class bucketexca extends AppCompatActivity {
             public void onClick(View v) {
                 Intent komatsu = new Intent(bucketexca.this,dtexcat5tn_comatsu.class);
                 startActivity(komatsu);
+            }
+        });
+
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent back = new Intent(bucketexca.this, beranda.class);
+                startActivity(back);
             }
         });
     }

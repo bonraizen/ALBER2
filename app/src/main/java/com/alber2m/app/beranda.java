@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+
 
 
 import com.google.android.gms.ads.AdRequest;
@@ -14,7 +17,9 @@ import com.google.android.gms.ads.AdView;
 
 public class beranda extends AppCompatActivity {
 
-    ImageButton btnexca,btnroller,btndozer,btnbreakerexca,btnforklift,btnlift,btnprofiluser;
+    ImageView btnprofiluser;
+
+    LinearLayout btnroller,btndozer,btnbreakerexca,btnforklift,btnlift,btnexca;
 
     private AdView mAdView;
     public void sumber (){
@@ -91,7 +96,7 @@ public class beranda extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_beranda);
+        setContentView(R.layout.activity_beranda_new);
 
         //Masukan reference tombol
             sumber();
